@@ -1,0 +1,1172 @@
+
+/* =========================================
+   BOTANICAL ARCHIVE
+   PURPLE × GREEN EDITORIAL
+========================================= */
+
+
+/* 01. COLOR SYSTEM */
+
+:root {
+    --paper: #C7D0C8;
+    --paper-light: #D9D8DF;
+    --paper-deep: #AEBEAF;
+
+    --plum: #382D43;
+    --plum-soft: #71627D;
+    --lavender: #B9A9C8;
+    --lavender-light: #D0C6D9;
+
+    --moss: #607765;
+    --moss-light: #A8BBAA;
+    --moss-pale: #B9CABB;
+
+    --ink: #303A35;
+    --muted: #77817A;
+
+    --line: #AAB8AE;
+}
+
+
+/* =========================================
+   02. GLOBAL SETTINGS
+========================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+
+    padding: 42px 22px;
+
+    background-color: #26352F;
+
+    background-image:
+        linear-gradient(
+            rgba(26, 35, 33, 0.38),
+            rgba(30, 35, 42, 0.52)
+        ),
+        url("images/背景 紫綠.jpg");
+
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+
+    color: var(--ink);
+
+    font-family:
+        "Noto Sans TC",
+        "Microsoft JhengHei",
+        sans-serif;
+}
+
+
+/* =========================================
+   03. MAIN RESUME
+========================================= */
+
+.resume {
+    position: relative;
+
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    background: var(--paper);
+
+    overflow: hidden;
+
+    border: 1px solid rgba(220, 230, 220, 0.5);
+
+    box-shadow:
+        0 20px 60px rgba(13, 23, 20, 0.28);
+}
+
+
+/* =========================================
+   04. TOP LINE
+========================================= */
+
+.top-line {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 20px 65px;
+
+    background: var(--plum);
+
+    color: var(--lavender);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+    letter-spacing: 2px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+
+/* =========================================
+   05. HERO
+========================================= */
+
+.hero {
+    position: relative;
+
+    display: grid;
+    grid-template-columns: 1.3fr 0.7fr;
+
+    align-items: center;
+
+    min-height: 390px;
+
+    padding: 55px 75px;
+
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(201, 190, 213, 0.48),
+            transparent 36%
+        ),
+        linear-gradient(
+            125deg,
+            #E9EEE9 0%,
+            #DCE5DF 100%
+        );
+
+    color: var(--plum);
+
+    border-bottom: 1px solid var(--line);
+
+    overflow: hidden;
+}
+
+
+/* Hero decoration */
+
+.hero-decoration {
+    position: absolute;
+
+    width: 350px;
+    height: 350px;
+
+    right: 110px;
+    top: -130px;
+
+    pointer-events: none;
+
+    opacity: 0.75;
+}
+
+.decor-circle {
+    position: absolute;
+
+    border-radius: 50%;
+
+    border: 1px solid rgba(96, 119, 101, 0.35);
+}
+
+.circle-one {
+    width: 310px;
+    height: 310px;
+
+    top: 0;
+    left: 0;
+}
+
+.circle-two {
+    width: 225px;
+    height: 225px;
+
+    top: 43px;
+    left: 43px;
+
+    border-color: rgba(113, 98, 125, 0.45);
+}
+
+.vertical-text {
+    position: absolute;
+
+    right: 0;
+    bottom: -120px;
+
+    writing-mode: vertical-rl;
+
+    color: rgba(56, 45, 67, 0.38);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 12px;
+    letter-spacing: 5px;
+}
+
+
+/* Hero text */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 420px;
+}
+
+.eyebrow {
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 22px;
+}
+
+.hero h1 {
+    color: var(--plum);
+
+    font-family: "Noto Serif TC", "Noto Sans TC", serif;
+    font-size: 68px;
+    font-weight: 600;
+
+    letter-spacing: 14px;
+    line-height: 1.25;
+
+    text-shadow: 1px 2px 0 rgba(113, 98, 125, 0.10);
+}
+
+.hero h2 {
+    margin-top: 10px;
+
+    color: var(--moss);
+
+    font-size: 17px;
+    font-weight: 400;
+
+    letter-spacing: 6px;
+}
+
+.hero-line {
+    width: 85px;
+    height: 2px;
+
+    margin: 25px 0;
+
+    background: var(--moss);
+}
+
+.hero-description {
+    max-width: 350px;
+
+    color: #65736A;
+
+    font-size: 13px;
+    line-height: 2.3;
+
+    font-weight: 300;
+}
+
+.hero-tags {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 8px;
+
+    margin-top: 28px;
+}
+
+.hero-tags span {
+    padding: 6px 10px;
+
+    border: 1px solid rgba(96, 119, 101, 0.5);
+
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+
+/* Hero photo */
+
+.photo-area {
+    position: relative;
+    z-index: 2;
+
+    width: 205px;
+
+    margin-left: auto;
+}
+
+.photo-label {
+    display: flex;
+    justify-content: space-between;
+
+    margin-bottom: 9px;
+
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.photo-frame {
+    padding: 9px;
+
+    background: var(--paper-light);
+
+    border: 1px solid var(--line);
+
+    box-shadow:
+        8px 8px 0 rgba(96, 119, 101, 0.22);
+}
+
+.profile-photo {
+    display: block;
+
+    width: 100%;
+    height: 250px;
+
+    object-fit: cover;
+    object-position: center center;
+
+    filter:
+        saturate(0.92)
+        contrast(0.98);
+}
+
+.photo-caption {
+    margin-top: 12px;
+
+    color: var(--muted);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+
+    letter-spacing: 1.5px;
+    text-align: right;
+}
+
+
+/* =========================================
+   06. SECTION COMMON
+========================================= */
+
+.section {
+    padding: 55px 75px;
+}
+
+.section-heading {
+    display: flex;
+    align-items: flex-start;
+
+    gap: 18px;
+
+    margin-bottom: 28px;
+}
+
+.section-number {
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 32px;
+    font-weight: 500;
+
+    line-height: 1;
+}
+
+.section-en {
+    color: var(--plum-soft);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 15px;
+
+    font-style: italic;
+    letter-spacing: 2.5px;
+
+    margin-bottom: 4px;
+}
+
+.section-heading h2 {
+    color: var(--plum);
+
+    font-size: 20px;
+    font-weight: 600;
+
+    letter-spacing: 4px;
+}
+
+.section-description {
+    margin-top: -14px;
+    margin-bottom: 25px;
+    margin-left: 50px;
+
+    color: var(--muted);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   07. ABOUT ME
+========================================= */
+
+.about-section {
+    display: grid;
+    grid-template-columns: 0.75fr 1.25fr;
+
+    gap: 35px;
+
+    background: var(--paper-light);
+
+    border-bottom: 1px solid var(--line);
+}
+
+.about-section .section-heading {
+    margin-bottom: 0;
+}
+
+.about-content {
+    padding-left: 25px;
+
+    border-left: 2px solid var(--moss-light);
+}
+
+.about-content p {
+    color: #65736A;
+
+    font-size: 13px;
+    line-height: 2.35;
+
+    margin-bottom: 14px;
+}
+
+
+/* =========================================
+   08. EDUCATION AND PERSONAL DETAILS
+========================================= */
+
+.information-section {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    background: var(--paper-deep);
+}
+
+.information-card {
+    padding: 45px 55px;
+}
+
+.information-card .section-heading {
+    margin-bottom: 30px;
+}
+
+.information-card:first-child {
+    border-right: 1px solid var(--line);
+}
+
+
+/* Education timeline */
+
+.education-item {
+    position: relative;
+
+    display: flex;
+
+    gap: 18px;
+
+    padding-left: 20px;
+}
+
+.education-item::before {
+    content: "";
+
+    position: absolute;
+
+    left: 4px;
+    top: 5px;
+    bottom: 0;
+
+    width: 1px;
+
+    background: var(--moss);
+}
+
+.timeline-point {
+    position: absolute;
+
+    left: 0;
+    top: 5px;
+
+    width: 9px;
+    height: 9px;
+
+    border-radius: 50%;
+
+    background: var(--moss);
+
+    box-shadow:
+        0 0 0 4px rgba(96, 119, 101, 0.15);
+}
+
+.date-label {
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.education-item h3 {
+    margin: 8px 0;
+
+    color: var(--plum);
+
+    font-size: 16px;
+}
+
+.education-major {
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.status-label {
+    display: inline-block;
+
+    margin-top: 12px;
+
+    padding: 4px 10px;
+
+    background: var(--moss-pale);
+
+    color: var(--moss);
+
+    font-size: 11px;
+    letter-spacing: 1px;
+}
+
+
+/* Personal details */
+
+.detail-list {
+    display: flex;
+    flex-direction: column;
+
+    gap: 17px;
+}
+
+.detail-row {
+    display: grid;
+    grid-template-columns: 105px 1fr;
+
+    align-items: center;
+
+    padding-bottom: 12px;
+
+    border-bottom: 1px solid rgba(56, 45, 67, 0.15);
+}
+
+.detail-row span {
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.detail-row p {
+    color: #65736A;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   09. SOFTWARE AND SKILLS
+========================================= */
+
+.skills-section {
+    background: var(--paper-light);
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 0 40px;
+}
+
+.skill-item {
+    display: grid;
+    grid-template-columns: 30px 52px 1fr;
+
+    align-items: center;
+
+    gap: 13px;
+
+    padding: 22px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+.skill-number {
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 13px;
+}
+
+.skill-icon {
+    display: grid;
+    place-items: center;
+
+    width: 43px;
+    height: 43px;
+
+    border-radius: 50%;
+
+    background: var(--lavender-light);
+
+    color: var(--plum);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 17px;
+    font-weight: 700;
+
+    border: 1px solid rgba(113, 98, 125, 0.25);
+}
+
+.skill-info h3 {
+    color: var(--plum);
+
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.skill-info p {
+    margin-top: 6px;
+
+    color: var(--muted);
+
+    font-size: 11px;
+    line-height: 1.7;
+}
+
+
+/* =========================================
+   10. BOTANICAL INSPIRATION
+========================================= */
+
+.qualities-section {
+    background: var(--paper-deep);
+
+    border-top: 1px solid var(--line);
+}
+
+.focus-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 16px;
+}
+
+.focus-card {
+    min-height: 175px;
+
+    padding: 22px 19px;
+
+    background: var(--paper-light);
+
+    border: 1px solid var(--line);
+    border-top: 3px solid var(--moss);
+
+    transition:
+        transform 0.25s ease,
+        box-shadow 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.focus-card:hover {
+    transform: translateY(-4px);
+
+    border-top-color: var(--plum-soft);
+
+    box-shadow:
+        0 10px 24px rgba(56, 45, 67, 0.1);
+}
+
+.focus-index {
+    display: block;
+
+    margin-bottom: 20px;
+
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+}
+
+.focus-card h3 {
+    margin-bottom: 10px;
+
+    color: var(--plum);
+
+    font-size: 16px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.focus-card p {
+    color: #65736A;
+
+    font-size: 12px;
+    line-height: 2.1;
+}
+
+
+/* =========================================
+   11. INTERESTS
+========================================= */
+
+.interests-section {
+    background: var(--paper-light);
+
+    border-top: 1px solid var(--line);
+}
+
+.interest-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    gap: 12px;
+}
+
+.interest-card {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 155px;
+
+    padding: 18px 10px;
+
+    background: var(--paper);
+
+    border: 1px solid var(--line);
+
+    text-align: center;
+
+    transition:
+        transform 0.25s ease,
+        background 0.25s ease,
+        border-color 0.25s ease;
+}
+
+.interest-card:nth-child(even) {
+    background: var(--lavender-light);
+    border-color: #CFC3D8;
+}
+
+.interest-card:hover {
+    transform: translateY(-5px);
+
+    background: var(--moss-pale);
+
+    border-color: var(--moss);
+}
+
+.interest-number {
+    position: absolute;
+
+    top: 10px;
+    left: 12px;
+
+    color: var(--moss);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 11px;
+
+    letter-spacing: 1px;
+}
+
+.interest-symbol {
+    display: grid;
+    place-items: center;
+
+    width: 42px;
+    height: 42px;
+
+    margin-bottom: 12px;
+
+    border-radius: 50%;
+
+    background: rgba(96, 119, 101, 0.12);
+
+    color: var(--plum-soft);
+
+    font-size: 23px;
+}
+
+.interest-card h3 {
+    color: var(--plum);
+
+    font-size: 14px;
+    font-weight: 600;
+
+    letter-spacing: 1px;
+}
+
+.interest-card p {
+    margin-top: 7px;
+
+    color: var(--muted);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 10px;
+
+    letter-spacing: 1.2px;
+}
+
+
+/* =========================================
+   12. CONTACT
+========================================= */
+
+.contact-section {
+    padding: 45px 75px 22px;
+
+    background: var(--plum);
+
+    color: var(--paper-light);
+}
+
+.contact-heading .section-en {
+    color: var(--lavender);
+}
+
+.contact-heading h2 {
+    color: var(--paper-light);
+
+    font-size: 23px;
+    letter-spacing: 5px;
+}
+
+.contact-list {
+    margin-top: 25px;
+}
+
+.contact-row {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+
+    gap: 15px;
+
+    padding: 13px 0;
+
+    border-bottom: 1px solid rgba(228, 221, 235, 0.2);
+}
+
+.contact-row span {
+    color: var(--moss-light);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 12px;
+
+    letter-spacing: 2px;
+}
+
+.contact-row p,
+.contact-row a {
+    color: var(--paper-light);
+
+    font-size: 12px;
+    text-decoration: none;
+
+    overflow-wrap: anywhere;
+}
+
+.contact-row a:hover {
+    color: var(--lavender);
+}
+
+
+/* Footer */
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+
+    gap: 10px;
+
+    margin-top: 35px;
+    padding-top: 15px;
+
+    border-top: 1px solid rgba(228, 221, 235, 0.2);
+
+    color: var(--lavender);
+
+    font-family: "Cormorant Garamond", serif;
+    font-size: 10px;
+
+    letter-spacing: 2px;
+}
+
+
+/* =========================================
+   13. RESPONSIVE
+========================================= */
+
+@media (max-width: 700px) {
+
+    body {
+        display: block;
+
+        padding: 0;
+
+        background-attachment: scroll;
+    }
+
+    .top-line {
+        padding: 16px 20px;
+
+        font-size: 9px;
+        letter-spacing: 1px;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        gap: 35px;
+
+        padding: 40px 28px;
+    }
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: 8px;
+    }
+
+    .photo-area {
+        width: 180px;
+
+        margin: 0 auto;
+    }
+
+    .profile-photo {
+        height: 220px;
+    }
+
+    .section {
+        padding: 40px 28px;
+    }
+
+    .about-section {
+        grid-template-columns: 1fr;
+
+        gap: 10px;
+    }
+
+    .about-content {
+        padding-left: 0;
+
+        border-left: none;
+    }
+
+    .information-section {
+        grid-template-columns: 1fr;
+    }
+
+    .information-card {
+        padding: 35px 28px;
+    }
+
+    .information-card:first-child {
+        border-right: none;
+
+        border-bottom: 1px solid var(--line);
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+
+        gap: 0;
+    }
+
+    .section-description {
+        margin-left: 0;
+    }
+
+    .focus-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .focus-card {
+        min-height: auto;
+    }
+
+    .interest-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .interest-card:last-child {
+        grid-column: 1 / -1;
+    }
+
+    .contact-section {
+        padding: 40px 28px 20px;
+    }
+
+    .footer-bottom {
+        flex-wrap: wrap;
+
+        font-size: 9px;
+    }
+
+}
+
+
+/* =========================================
+   14. PRINT
+========================================= */
+
+@page {
+    size: A4;
+    margin: 0;
+}
+
+@media print {
+
+    body {
+        display: block;
+
+        padding: 0;
+
+        background: white !important;
+    }
+
+    .resume {
+        width: 210mm;
+        max-width: none;
+
+        margin: 0;
+
+        box-shadow: none;
+
+        overflow: visible;
+    }
+
+    .hero,
+    .top-line,
+    .contact-section,
+    .information-section,
+    .skills-section,
+    .qualities-section,
+    .interests-section {
+        -webkit-print-color-adjust: exact;
+        print-color-adjust: exact;
+    }
+
+    .skill-item,
+    .information-card,
+    .focus-card,
+    .interest-card {
+        break-inside: avoid;
+    }
+
+}
+
+
+/* =========================================
+   15. BOTANICAL INSPIRATION CARDS
+========================================= */
+
+.flower-focus {
+    position: relative;
+    overflow: hidden;
+}
+
+.flower-focus::after {
+    content: "";
+
+    position: absolute;
+
+    width: 105px;
+    height: 105px;
+
+    right: -30px;
+    bottom: -38px;
+
+    border: 1px solid rgba(96, 119, 101, 0.24);
+    border-radius: 50%;
+
+    pointer-events: none;
+}
+
+.tulip-focus {
+    border-top-color: #8D6E9E;
+
+    background:
+        linear-gradient(
+            145deg,
+            #D9D0E0,
+            #D9D8DF
+        );
+}
+
+.lavender-focus {
+    border-top-color: #82708F;
+
+    background:
+        linear-gradient(
+            145deg,
+            #CEC2D8,
+            #D9D8DF
+        );
+}
+
+.babybreath-focus {
+    border-top-color: #718A78;
+
+    background:
+        linear-gradient(
+            145deg,
+            #C4D2C5,
+            #D9D8DF
+        );
+}
+
+.flower-focus .focus-index {
+    color: var(--plum-soft);
+}
+
+@media (max-width: 700px) {
+
+    .hero h1 {
+        font-size: 48px;
+        letter-spacing: 9px;
+    }
+
+}

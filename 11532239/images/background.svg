@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="1104" viewBox="0 0 1440 1104">
+  <defs>
+    <linearGradient id="base" x1="0" y1="0" x2="1" y2="0">
+      <stop stop-color="#e2d8f5"/>
+      <stop offset=".48" stop-color="#ece3f6"/>
+      <stop offset="1" stop-color="#f1dce9"/>
+    </linearGradient>
+    <radialGradient id="glow">
+      <stop stop-color="#fff" stop-opacity=".8"/>
+      <stop offset="1" stop-color="#fff" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="46" height="46" patternUnits="userSpaceOnUse">
+      <path d="M46 0H0V46" fill="none" stroke="#fff" stroke-opacity=".6" stroke-width=".8"/>
+    </pattern>
+    <linearGradient id="silver" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#fff"/><stop offset=".4" stop-color="#b5a5c9"/>
+      <stop offset=".52" stop-color="#fff"/><stop offset="1" stop-color="#c7b9d9"/>
+    </linearGradient>
+    <path id="spark" d="M0-40C4-10 10-4 40 0 10 4 4 10 0 40-4 10-10 4-40 0-10-4-4-10 0-40Z"/>
+    <path id="plus" d="M-5 0H5M0-5V5" fill="none" stroke="#ad95c5" stroke-opacity=".5" stroke-width="1"/>
+  </defs>
+  <path fill="url(#base)" d="M0 0h1440v1104H0z"/>
+  <ellipse cx="200" cy="300" rx="490" ry="300" fill="url(#glow)"/>
+  <ellipse cx="1280" cy="780" rx="420" ry="300" fill="url(#glow)"/>
+  <path fill="url(#grid)" d="M0 0h1440v1104H0z"/>
+  <g fill="none" stroke="#bca4d1" stroke-opacity=".45">
+    <ellipse cx="85" cy="395" rx="125" ry="49" transform="rotate(-37 85 395)"/>
+    <ellipse cx="85" cy="395" rx="125" ry="49" transform="rotate(37 85 395)"/>
+    <circle cx="85" cy="395" r="75" stroke-opacity=".22"/>
+    <ellipse cx="1352" cy="816" rx="151" ry="55" transform="rotate(-28 1352 816)"/>
+    <ellipse cx="1352" cy="816" rx="151" ry="55" transform="rotate(28 1352 816)"/>
+  </g>
+  <g fill="url(#silver)" stroke="#bea9d1" stroke-width=".7" opacity=".8">
+    <use href="#spark" transform="translate(153 171) rotate(12) scale(.8)"/>
+    <use href="#spark" transform="translate(1317 292) rotate(-8) scale(1.1)"/>
+    <use href="#spark" transform="translate(123 918) rotate(9) scale(1.15)"/>
+    <use href="#spark" transform="translate(1313 1005) rotate(15) scale(.45)"/>
+  </g>
+  <g fill="#fff" opacity=".9">
+    <use href="#spark" transform="translate(192 223) scale(.24)"/>
+    <use href="#spark" transform="translate(1270 235) scale(.25)"/>
+    <use href="#spark" transform="translate(175 979) scale(.3)"/>
+    <use href="#spark" transform="translate(1241 664) scale(.35)"/>
+  </g>
+  <use href="#plus" transform="translate(80 76)"/>
+  <use href="#plus" transform="translate(200 611)"/>
+  <use href="#plus" transform="translate(68 722)"/>
+  <use href="#plus" transform="translate(1360 120)"/>
+  <use href="#plus" transform="translate(1260 481)"/>
+  <use href="#plus" transform="translate(1380 585)"/>
+  <use href="#plus" transform="translate(1200 1040)"/>
+</svg>

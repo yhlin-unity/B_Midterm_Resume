@@ -1,0 +1,240 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Sans TC", sans-serif;
+  background: #fce5e8;
+  color: #554747;
+  padding: 40px 20px;
+}
+
+.resume {
+  position: relative;
+  width: 900px;
+  max-width: 100%;
+  margin: auto;
+  padding: 38px;
+  background: #fffdfb;
+  border: 18px solid #f6c4ca;
+  box-shadow: 0 8px 25px rgba(180, 110, 120, 0.15);
+}
+
+/* 上方個人資料 */
+.profile-header {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding-bottom: 30px;
+  border-bottom: 2px solid #f8e4e4;
+}
+
+.photo-area {
+  width: 210px;
+  height: 210px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  padding: 6px;
+  border: 3px solid #edb6ad;
+}
+
+.photo-area img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.profile-info h1 {
+  font-size: 34px;
+  color: #76545a;
+  margin-bottom: 20px;
+}
+
+.profile-info h2 {
+  font-size: 27px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.profile-info h2 span {
+  font-size: 20px;
+  margin-left: 8px;
+  color: #88777a;
+}
+
+.profile-info p {
+  font-size: 15px;
+  line-height: 2.1;
+  background: #fce9e7;
+  margin-bottom: 5px;
+  padding: 2px 8px;
+}
+
+/* 左右欄 */
+.columns {
+  display: grid;
+  grid-template-columns: 0.85fr 1.15fr;
+  gap: 35px;
+  padding-top: 28px;
+}
+
+.section {
+  margin-bottom: 25px;
+}
+
+.section h3 {
+  background: #f5c9c0;
+  color: #714e50;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  border-radius: 30px;
+  padding: 7px 12px;
+  margin-bottom: 13px;
+}
+
+.section ul {
+  padding-left: 25px;
+}
+
+.section li {
+  font-size: 15px;
+  line-height: 2;
+  padding-left: 2px;
+}
+
+.paragraph {
+  font-size: 14px;
+  line-height: 2;
+  text-align: justify;
+  margin-bottom: 12px;
+}
+
+.right-column .section h3 {
+  text-align: left;
+  padding-left: 18px;
+  border-radius: 5px;
+}
+
+/* 軟體圖示 */
+.software {
+  display: grid;
+  grid-template-columns: repeat(3, 53px);
+  gap: 9px;
+  justify-content: center;
+  margin: 15px 0;
+}
+
+.software span {
+  width: 53px;
+  height: 53px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 27px;
+  font-weight: bold;
+  color: white;
+}
+
+.ps { background: #092b50; }
+.ai { background: #a94c0c; }
+.id { background: #8e1742; }
+.ae { background: #29235f; }
+.pr { background: #272b68; }
+.procreate { background: #292929; }
+
+.software-name {
+  text-align: center;
+  font-size: 11px;
+  line-height: 1.8;
+  color: #806f70;
+}
+
+.timeline {
+  border-left: 3px solid #e9b4b2;
+  padding-left: 17px;
+  margin-left: 10px;
+}
+
+.timeline strong {
+  font-size: 16px;
+}
+
+.timeline p {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #8b7777;
+}
+
+.page-number {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: #edb5a7;
+  color: #76545a;
+  border-radius: 20px 0 0 0;
+  padding: 10px 15px;
+  font-size: 13px;
+}
+
+/* 手機版 */
+@media (max-width: 650px) {
+  body {
+    padding: 12px;
+  }
+
+  .resume {
+    padding: 20px;
+    border-width: 8px;
+  }
+
+  .profile-header {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .photo-area {
+    width: 160px;
+    height: 160px;
+  }
+
+  .profile-info h1 {
+    font-size: 28px;
+  }
+
+  .profile-info h2 {
+    font-size: 22px;
+  }
+
+  .profile-info h2 span {
+    font-size: 16px;
+  }
+
+  .profile-info p {
+    font-size: 12px;
+    overflow-wrap: anywhere;
+  }
+
+  .columns {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+
+  .resume {
+    box-shadow: none;
+    width: 100%;
+    border-width: 12px;
+  }
+}

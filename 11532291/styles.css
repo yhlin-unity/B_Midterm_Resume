@@ -1,0 +1,203 @@
+/* Canva 質感莫蘭迪鼠尾草綠配色 */
+:root {
+  --primary: #3b5249;       /* 主色：深鼠尾草綠 */
+  --primary-light: #e6ece9; /* 側邊欄底色：極淺灰綠 */
+  --text: #222624;          /* 深炭灰文字，比純黑更柔和 */
+  --text-muted: #555e5a;    /* 次要資訊文字色 */
+  --white: #ffffff;
+  --sidebar-w: 311px;
+  --main-x: 340px;
+  --main-w: 395px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  /* 加上柔和的抽象建築/大理石質感背景圖，並確保履歷置中 */
+  background-color: #d6dcd9;
+  background-image: linear-gradient(rgba(235, 240, 238, 0.72), rgba(220, 228, 224, 0.82)),
+                    url("https://images.unsplash.com/photo-1513519245088-0e12902e5a38?auto=format&fit=crop&w=1920&q=80");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  color: var(--text);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 16px;
+}
+
+/* A4 比例履歷頁面 */
+.page {
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  background: linear-gradient(to right, var(--primary-light) var(--sidebar-w), var(--white) var(--sidebar-w));
+  box-shadow: 0 18px 45px rgba(28, 40, 35, 0.18);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 頂部色帶 */
+.band {
+  position: absolute;
+  top: 68px;
+  left: 0;
+  right: 0;
+  height: 126px;
+  background: var(--primary);
+}
+
+.intro {
+  position: absolute;
+  top: 90px;
+  left: var(--main-x);
+  color: var(--white);
+}
+
+.intro h1 {
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 1.15;
+  letter-spacing: 4px;
+}
+
+.job-title {
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 17px;
+  letter-spacing: 2px;
+  opacity: 0.92;
+}
+
+/* 若有放置大頭照時的樣式 */
+.photo {
+  position: absolute;
+  left: 68px;
+  top: 115px;
+  width: 175px;
+  height: 175px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+/* 區塊標題 */
+h2 {
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 1.5px;
+  line-height: 34px;
+  padding: 0 12px;
+  border-radius: 2px;
+}
+
+.block + .block { margin-top: 26px; }
+
+/* 左側欄 */
+.sidebar {
+  position: absolute;
+  top: 235px; /* 無照片時上移至合適位置；若有加照片可改回 320px */
+  left: 44px;
+  width: 224px;
+  font-size: 13.5px;
+}
+
+.contact { list-style: none; }
+
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 13px;
+  font-size: 13.5px;
+  line-height: 1.4;
+  word-break: break-word;
+}
+
+.contact li.address-item {
+  align-items: flex-start;
+}
+
+.icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--primary);
+  display: grid;
+  place-items: center;
+}
+
+.icon svg { width: 15px; height: 15px; fill: var(--white); }
+
+.sidebar .block:first-of-type { margin-top: 38px; }
+
+.sidebar .dash,
+.lang,
+.skills { margin-top: 10px; }
+
+.dash { list-style: none; line-height: 22px; }
+
+.lang { line-height: 20px; }
+.lang + .lang { margin-top: 8px; }
+
+.skills { line-height: 21px; font-weight: 400; font-size: 13.5px; color: var(--text-muted); }
+
+/* 右側欄 */
+.content {
+  position: absolute;
+  top: 225px;
+  left: var(--main-x);
+  width: var(--main-w);
+  font-size: 14px;
+  line-height: 21px;
+}
+
+.about-text {
+  margin-top: 10px;
+  text-align: justify;
+  color: var(--text);
+}
+
+.entry { margin-top: 12px; }
+.entry + .entry { margin-top: 20px; }
+.entry.compact + .entry.compact { margin-top: 14px; }
+
+.entry h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 20px;
+}
+
+.meta {
+  font-size: 13px;
+  font-weight: 400;
+  color: var(--text-muted);
+  line-height: 18px;
+  margin-top: 2px;
+}
+
+.entry .dash { margin-top: 6px; }
+
+/* 列印設定 (A4) */
+@page { size: A4; margin: 0; }
+
+@media print {
+  body { background: none; padding: 0; display: block; }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    height: 297mm;
+    box-shadow: none;
+    border-radius: 0;
+    print-color-adjust: exact;
+  }
+}

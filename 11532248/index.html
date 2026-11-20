@@ -1,0 +1,194 @@
+
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>個人履歷表</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <main class="page">
+
+    <!-- Header band -->
+    <div class="band"></div>
+
+    <header class="intro">
+      <h1>林  廷  璇</h1>
+      <p class="job-title">致理科技大學</p>
+    </header>
+
+    <img class="photo"
+         src="images/pixarLin.png"
+         alt="Portrait of Lin Ting-Hsuan"
+         width="200"
+         height="200">
+
+    <!-- Left column -->
+    <aside class="sidebar">
+
+      <h2 class="contact-title">基本資訊</h2>
+
+      <ul class="contact">
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/>
+            </svg>
+          </span>
+          <span>+886-907-214-725</span>
+        </li>
+
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7v.2L12 12.6 19.4 7.2V7L12 12.2z"/>
+            </svg>
+          </span>
+          <span>muran970417@gmail.com</span>
+        </li>
+
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true">
+              <path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/>
+            </svg>
+          </span>
+          <span>台北市文山區華興里013鄰木柵路一段118號</span>
+        </li>
+      </ul>
+
+<!-- 專業能力 -->
+<section class="block">
+  <h2>專業能力</h2>
+  <ul class="dash">
+    <li>丙級印前製程－圖文組版 PC 證照</li>
+    <li>丙級建築與製圖應用－電腦繪圖證照</li>
+  </ul>
+
+  <h2>精熟軟體</h2>
+  <ul class="dash">
+    <li>Adobe Illustrator</li>
+    <li>Adobe Photoshop</li>
+    <li>Adobe InDesign</li>
+    <li>AutoCAD</li>
+    <li>SketchUp</li>
+    <li>Rhino</li>
+    <li>Twinmotion</li>
+  </ul>
+</section>
+      <!-- 學歷資料 -->
+      <section class="block">
+        <h2>學歷資料</h2>
+
+        <article class="entry compact">
+          <h3>致理科技大學</h3>
+          <p class="meta">多媒體設計學系 | 正在就讀</p>
+        </article>
+
+        <article class="entry compact">
+          <h3>松山高級商業家事職業學校</h3>
+          <p class="meta">室內設計系 | 2023年9月 - 2026年6月</p>
+        </article>
+
+        <article class="entry compact">
+          <h3>實踐國中</h3>
+          <p class="meta">2020年9月 - 2023年6月</p>
+        </article>
+
+        <article class="entry compact">
+          <h3>永建國小</h3>
+          <p class="meta">2020年9月 - 2023年6月</p>
+        </article>
+
+      </section>
+    </aside>
+
+    <!-- Right column -->
+    <div class="content">
+
+      <!-- 關於我 -->
+      <section class="block">
+        <h2>關於我</h2>
+        <p>
+          我叫林廷璇，目前就讀於致理科技大學多媒體設計系，
+          畢業於松山高級商業家事職業學校室內設計科。
+          平時喜歡閱讀小說，擅長從故事與生活中汲取靈感，
+          並將想法轉化為視覺設計。
+          我希望透過設計傳達想法，持續累積經驗並提升自己的設計能力。
+        </p>
+      </section>
+
+      <!-- 得獎經歷 -->
+      <section class="block">
+        <h2>得獎經歷</h2>
+        <ul class="dash">
+          <li>112 學年度第二學期室內設計科第 31 屆科展數位設計 CIS 我要當老闆【佳作】</li>
+          <li>112 學年度第二學期室內設計科第 31 屆科展色彩應用奇島幻景【佳作】</li>
+          <li>112 學年度第二學期室內設計科第 31 屆科展室內設計手繪平面圖＋模型【佳作】</li>
+          <li>112 學年度第二學期室內設計科第 31 屆科展基本設計實習平面轉立體【佳作】</li>
+          <li>112 學年度第二學期學習歷程檔案作品徵選【特優】</li>
+          <li>113 學年度第二學期室內設計科第 32 屆科展模型製作【特優】</li>
+          <li>113 學年度第二學期室內設計科第 32 屆科展電腦輔助設計【佳作】</li>
+          <li>113 學年度第二學期室內設計科第 32 屆科展風格居家設計【入選】</li>
+          <li>113 學年度第二學期室內設計科第 32 屆科展概念模型【入選】</li>
+          <li>2024 年全國高中職校主題設計行銷創意競賽 A 組【佳作】</li>
+          <li>2024 年全國國小、國中、高中職顧牙四格漫畫作品【參加獎】</li>
+          <li>2025 年全國國小、國中、高中職顧牙四格漫畫作品【參加獎】</li>
+          <li>115 年全國高級中等學校設計群專題實作及創意競賽複賽【入選】</li>
+          <li>115 年全國高級中等學校設計群專題實作及創意競賽複賽【佳作】</li>
+        </ul>
+      </section>
+
+      <!-- 個人能力／學業、智育成績 -->
+      <section class="block">
+        <h2>個人能力／學業、智育成績</h2>
+        <ul class="dash">
+          <li>112 學年度第一學期第二次期中考【第二名】</li>
+          <li>112 學年度第一學期第二次期中考【班級進步獎】</li>
+          <li>112 學年度第一學期第二次期中考【室內設計科進步獎】</li>
+          <li>112 學年度第一學期期末考【第三名】</li>
+          <li>112 學年度第一學期智育成績【第二名】</li>
+          <li>112 學年度第二學期第一次期中考【第三名】</li>
+          <li>112 學年度第二學期第二次期中考【第三名】</li>
+          <li>112 學年度第二學期期末考【第三名】</li>
+          <li>112 學年度第二學期智育成績【第二名】</li>
+        </ul>
+      </section>
+
+
+
+    </div>
+
+  </main>
+</body>
+</html>

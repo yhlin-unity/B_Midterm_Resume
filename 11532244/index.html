@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>李宗叡 – 個人履歷</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Open Sans', 'Microsoft JhengHei', sans-serif;
+      background-color: #f0f2f5;
+      color: #333;
+      line-height: 1.6;
+      padding: 30px 15px;
+    }
+
+    /* 主容器：A4 比例雙欄網格，消除多餘留白 */
+    .page {
+      max-width: 900px;
+      margin: 0 auto;
+      background: #fff;
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    /* 左側欄 */
+    .sidebar {
+      background-color: #2c3e50;
+      color: #ecf0f1;
+      padding: 36px 26px;
+    }
+
+    .photo-wrap {
+      text-align: center;
+      margin-bottom: 24px;
+    }
+
+    .photo {
+      width: 165px;
+      height: 165px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid rgba(255, 255, 255, 0.2);
+      display: inline-block;
+    }
+
+    .contact {
+      list-style: none;
+      margin-bottom: 28px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 20px;
+    }
+
+    .contact li {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 12px;
+      font-size: 0.9rem;
+      word-break: break-all;
+    }
+
+    .contact .icon svg {
+      width: 16px;
+      height: 16px;
+      fill: #3498db;
+      flex-shrink: 0;
+      display: block;
+    }
+
+    .sidebar .block {
+      margin-bottom: 24px;
+    }
+
+    .sidebar .block:last-child {
+      margin-bottom: 0;
+    }
+
+    .sidebar h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.05rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #3498db;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+      padding-bottom: 6px;
+      margin-bottom: 12px;
+    }
+
+    .sidebar ul.dash {
+      list-style: none;
+      font-size: 0.92rem;
+    }
+
+    .sidebar ul.dash li {
+      padding-left: 14px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .sidebar ul.dash li::before {
+      content: "–";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+    }
+
+    .sidebar .lang {
+      font-size: 0.92rem;
+      margin-bottom: 10px;
+    }
+
+    .sidebar .skills {
+      font-size: 0.92rem;
+      line-height: 1.7;
+    }
+
+    /* 右側主內容區 */
+    .content {
+      padding: 36px 40px;
+    }
+
+    /* 姓名標題區直接置於右側頂部，不留空隙 */
+    .intro {
+      border-bottom: 2px solid #2c3e50;
+      padding-bottom: 18px;
+      margin-bottom: 26px;
+    }
+
+    .intro h1 {
+      font-family: 'Raleway', 'Microsoft JhengHei', sans-serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: #2c3e50;
+      letter-spacing: 4px;
+      line-height: 1.2;
+    }
+
+    .intro .job-title {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: #3498db;
+      margin-top: 6px;
+    }
+
+    .content .block {
+      margin-bottom: 28px;
+    }
+
+    .content .block:last-child {
+      margin-bottom: 0;
+    }
+
+    .content h2 {
+      font-family: 'Raleway', sans-serif;
+      font-size: 1.2rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: #2c3e50;
+      border-bottom: 1px solid #e0e0e0;
+      padding-bottom: 6px;
+      margin-bottom: 16px;
+    }
+
+    .content p {
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    .entry {
+      margin-bottom: 22px;
+    }
+
+    .entry:last-child {
+      margin-bottom: 0;
+    }
+
+    .entry h3 {
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: #222;
+    }
+
+    .entry .meta {
+      font-size: 0.88rem;
+      color: #777;
+      margin: 3px 0 10px;
+      font-weight: 600;
+    }
+
+    .content ul.dash {
+      list-style: none;
+      font-size: 0.94rem;
+      color: #444;
+    }
+
+    .content ul.dash li {
+      padding-left: 16px;
+      position: relative;
+      margin-bottom: 6px;
+    }
+
+    .content ul.dash li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: #3498db;
+      font-weight: bold;
+    }
+
+    /* 手機版自動變單欄 */
+    @media (max-width: 720px) {
+      .page {
+        grid-template-columns: 1fr;
+      }
+      .content {
+        padding: 28px 24px;
+      }
+    }
+  </style>
+</head>
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <main class="page">
+
+    <!-- Left column -->
+    <aside class="sidebar">
+      <div class="photo-wrap">
+        <img class="photo" src="images/帥哥.png" alt="李宗叡個人照片">
+      </div>
+
+      <ul class="contact">
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </span>
+          <span>0905048300</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7v.2L12 12.6 19.4 7.2V7L12 12.2z"/></svg>
+          </span>
+          <span>11532244@gm.chihlee.edu.tw</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <span>台北火車站</span>
+        </li>
+      </ul>
+
+      <section class="block">
+        <h2>More information</h2>
+        <ul class="dash">
+          <li>工業電子丙級技術士證照</li>
+          <li>普通重型機車駕照</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>Languages</h2>
+        <p class="lang"><strong>英文:</strong><br>Medium level</p>
+        <p class="lang"><strong>中文:</strong><br>Native / Fluent</p>
+      </section>
+
+      <section class="block">
+        <h2>Skills</h2>
+        <p class="skills">良好的溝通能力、大型團隊管理能力、問題解決能力、基礎電子電路與硬體實作</p>
+      </section>
+    </aside>
+
+    <!-- Right column -->
+    <div class="content">
+      <header class="intro">
+        <h1>李  宗  叡</h1>
+        <p class="job-title">控球後衛</p>
+      </header>
+
+      <section class="block">
+        <h2>About me</h2>
+        <p>目前就讀致理科技大學多媒體設計系，具備電子工科背景與數位設計的跨領域思維。做事認真，願意主動學習不同事物，善於將邏輯分析與視覺創意結合，期待透過不同的學習與實作經驗持續提升自己。</p>
+      </section>
+
+      <section class="block">
+        <h2>Education</h2>
+
+        <article class="entry">
+          <h3>致理科技大學 — 多媒體設計系</h3>
+          <p class="meta">學士學位（就學中） | 2026 - Present</p>
+          <ul class="dash">
+            <li>學習視覺傳達、平面設計與數位媒體基礎理論與實務。</li>
+            <li>培養網頁介面設計（UI/UX）、影音剪輯與多媒體互動製作能力。</li>
+            <li>透過專題分組實作，訓練團隊溝通協調與專案執行能力。</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>臺北市立松山高級工農職業學校 — 電子科</h3>
+          <p class="meta">高職畢業 | 2023 - 2026</p>
+          <ul class="dash">
+            <li>考取國家「工業電子丙級技術士」證照，具備紮實的電路裝配、焊接與儀表量測實作能力。</li>
+            <li>學習基礎電子電路、微處理機與程式邏輯控制等實務課程，培養嚴謹的故障排除能力。</li>
+            <li>具備工科邏輯思維，為日後跨足數位互動與多媒體設計奠定技術基礎。</li>
+          </ul>
+        </article>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>

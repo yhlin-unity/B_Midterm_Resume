@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>曾籽堯 – 個人履歷表</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <main class="page">
+
+    <!-- 頂部色帶與姓名職稱 -->
+    <div class="band"></div>
+    <header class="intro">
+      <h1>曾 籽 堯</h1>
+      <p class="job-title">設計師 / 水吧技術人員</p>
+    </header>
+
+    <!-- 若有大頭照可取消下方註解並換上圖片路徑 -->
+    <!-- <img class="photo" src="images/avatar.png" alt="曾籽堯大頭照"> -->
+
+    <!-- 左側欄：聯絡資訊、技能、語言、其他資訊 -->
+    <aside class="sidebar">
+      <ul class="contact">
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </span>
+          <span>9035 6877</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7v.2L12 12.6 19.4 7.2V7L12 12.2z"/></svg>
+          </span>
+          <span>ttyiu94@gmail.com</span>
+        </li>
+        <li class="address-item">
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <span>Room 734, Oi Fai House, Yau Oi Estate, Tuen Mun, New Territories</span>
+        </li>
+      </ul>
+
+      <section class="block">
+        <h2>專業技能</h2>
+        <ul class="dash">
+          <li>• 影音剪接</li>
+          <li>• 攝影拍攝</li>
+          <li>• 平面設計</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>語言能力</h2>
+        <p class="lang"><strong>粵語：</strong>母語</p>
+        <p class="lang"><strong>普通話：</strong>流利</p>
+      </section>
+
+      <section class="block">
+        <h2>工作配合度</h2>
+        <p class="skills">能配合下午 1:00 至晚上 10:00 的輪班工作，願意由基層清潔及跟隨指引學起。</p>
+      </section>
+    </aside>
+
+    <!-- 右側主內容：關於我、工作經驗、學歷、校外課程 -->
+    <div class="content">
+      <section class="block">
+        <h2>關於我</h2>
+        <p class="about-text">本人現年滿 18 歲，具備良好中文溝通能力。性格積極主動、守時且重視團隊合作。能配合下午 1:00 至晚上 10:00 的輪班工作，並願意由基層清潔及跟隨指引學起，目標是成為一名專業的水吧技術人員。</p>
+      </section>
+
+      <section class="block">
+        <h2>工作經驗</h2>
+
+        <article class="entry">
+          <h3>設計師，處理影音剪接</h3>
+          <p class="meta">2025年10月 — 2026年2月</p>
+          <ul class="dash">
+            <li>• 負責影音剪接、攝影拍攝與平面設計製作。</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>壁畫師</h3>
+          <p class="meta">2023年9月 — 2025年10月</p>
+          <ul class="dash">
+            <li>• 負責手繪壁畫及壁畫視覺設計。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="block">
+        <h2>學歷</h2>
+        <article class="entry compact">
+          <h3>屯門東華三院鄺錫坤伉儷中學</h3>
+          <p class="meta">DSE文憑試 | 2019年9月 — 2025年7月</p>
+        </article>
+      </section>
+
+      <section class="block">
+        <h2>校外課程</h2>
+
+        <article class="entry compact">
+          <h3>ERB 僱員再培訓局</h3>
+          <p class="meta">數碼漫畫製作助理基礎證書 | 2025年10月 — 2025年12月</p>
+        </article>
+
+        <article class="entry compact">
+          <h3>YETP 展翅青見計劃</h3>
+          <p class="meta">數碼漫畫製作助理基礎證書 | 2025年7月 — 2025年8月</p>
+        </article>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>

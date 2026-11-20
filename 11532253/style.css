@@ -1,0 +1,252 @@
+/* Canva 莫蘭迪鼠尾草綠與暖沙色系配色 */
+:root {
+  --primary: #d7c170;        /* 主色：深鼠尾草綠 */
+  --primary-light: #cdcfa8;  /* 側欄底色：淺霧灰綠 */
+  --accent: #84472e;         /* 點綴色：暖陶土橘 */
+  --text: #222625;           /* 主文字深炭灰 */
+  --muted-text: #555e5c;     /* 次要文字灰綠 */
+  --white: #ffffff;
+  --sidebar-w: 311px;
+  --main-x: 340px;
+  --main-w: 390px;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Body 加入背景圖片並讓履歷表置中 */
+body {
+  min-height: 100vh;
+  background-color: #ebe6df;
+  background-image: url("images/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", "PingFang TC", sans-serif;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 40px 16px;
+}
+
+/* A4 比例履歷表頁面置中與陰影 */
+.page {
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  margin: 0 auto;
+  background: linear-gradient(to right, var(--primary-light) var(--sidebar-w), var(--white) var(--sidebar-w));
+  box-shadow: 0 18px 45px rgba(34, 48, 45, 0.16);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+/* 頂部標題色帶 */
+.band {
+  position: absolute;
+  top: 76px;
+  left: 0;
+  right: 0;
+  height: 126px;
+  background: var(--primary);
+  border-bottom: 4px solid var(--accent);
+}
+
+.intro {
+  position: absolute;
+  top: 98px;
+  left: var(--main-x);
+  color: var(--white);
+}
+
+.intro h1 {
+  font-weight: 700;
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: 4px;
+}
+
+.job-title {
+  margin-top: 8px;
+  font-weight: 300;
+  font-size: 18px;
+  letter-spacing: 3px;
+  color: #e6dfd8;
+}
+
+/* 個人大頭照 */
+.photo {
+  position: absolute;
+  left: 60px;
+  top: 120px;
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid var(--white);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.14);
+  display: block;
+}
+
+/* 區塊標題 */
+h2 {
+  background: var(--primary);
+  color: var(--white);
+  font-weight: 700;
+  font-size: 16.5px;
+  line-height: 36px;
+  padding: 0 14px;
+  letter-spacing: 2px;
+  border-left: 4px solid var(--accent);
+}
+
+.block + .block {
+  margin-top: 22px;
+}
+
+/* 左側邊欄 */
+.sidebar {
+  position: absolute;
+  top: 332px;
+  left: 48px;
+  width: 215px;
+  font-size: 13.5px;
+}
+
+.contact {
+  list-style: none;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+  font-size: 13px;
+  line-height: 1.4;
+  word-break: break-all;
+}
+
+.icon {
+  flex: none;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--accent);
+  display: grid;
+  place-items: center;
+}
+
+.icon svg {
+  width: 15px;
+  height: 15px;
+  fill: var(--white);
+}
+
+.sidebar .block:first-of-type {
+  margin-top: 36px;
+}
+
+.sidebar .dash,
+.lang,
+.skills {
+  margin-top: 10px;
+}
+
+.dash {
+  list-style: none;
+  line-height: 22px;
+}
+
+.dash li::before {
+  content: "• ";
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.lang {
+  line-height: 20px;
+}
+
+.lang + .lang {
+  margin-top: 12px;
+}
+
+.skills {
+  line-height: 22px;
+  font-weight: 400;
+  font-size: 13.5px;
+}
+
+/* 右側主要內容欄 */
+.content {
+  position: absolute;
+  top: 226px;
+  left: var(--main-x);
+  width: var(--main-w);
+  font-size: 14px;
+  line-height: 22px;
+}
+
+.content .block > p {
+  margin-top: 10px;
+  text-align: justify;
+}
+
+.entry {
+  margin-top: 12px;
+}
+
+.entry + .entry {
+  margin-top: 18px;
+}
+
+.entry.compact + .entry.compact {
+  margin-top: 14px;
+}
+
+.entry h3 {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--primary);
+  line-height: 20px;
+}
+
+.meta {
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--muted-text);
+  line-height: 20px;
+  margin-top: 2px;
+}
+
+.entry .dash {
+  margin-top: 6px;
+}
+
+/* 列印設定 */
+@page {
+  size: A4;
+  margin: 0;
+}
+
+@media print {
+  body {
+    background: none;
+    padding: 0;
+    display: block;
+  }
+  .page {
+    width: 210mm;
+    min-height: 297mm;
+    height: 297mm;
+    box-shadow: none;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

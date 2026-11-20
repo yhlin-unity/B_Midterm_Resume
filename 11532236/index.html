@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人履歷表</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <main class="resume">
+    <header class="hero">
+      <div class="hero-text">
+        <p class="eyebrow">PERSONAL RESUME</p>
+        <h1>陳仁杰</h1>
+        <p class="subtitle">大學生｜個人履歷</p>
+      </div>
+      <img class="profile-photo" src="images/profile.jpg" alt="個人照片">
+    </header>
+
+    <div class="resume-grid">
+      <aside class="sidebar">
+        <section class="section">
+          <h2>聯絡資訊</h2>
+          <ul class="contact-list">
+            <li><span class="contact-label">電話</span><a href="tel:0963638662">0963-638-662</a></li>
+            <li><span class="contact-label">電子郵件</span><span>jaychen970613@gmail.com</span></li>
+            <li><span class="contact-label">居住地</span><span>請填寫所在地</span></li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>個人特質</h2>
+          <ul class="tag-list">
+            <li>積極學習</li>
+            <li>認真負責</li>
+            <li>團隊合作</li>
+            <li>樂於挑戰</li>
+          </ul>
+        </section>
+
+        <section class="section">
+          <h2>技能專長</h2>
+          <p class="placeholder">游泳</p>
+        </section>
+      </aside>
+
+      <div class="main-content">
+        <section class="section">
+          <h2>關於我</h2>
+          <p>目前就讀大學，持續累積專業知識與實務能力。做事認真，願意主動學習新事物，也期待透過不同的學習與實作經驗提升自己。</p>
+        </section>
+
+        <section class="section">
+          <h2>學歷</h2>
+          <article class="entry">
+            <div class="entry-date">目前就讀</div>
+            <div>
+              <h3>大學</h3>
+              <p class="muted">學校名稱：致理大學</p>
+              <p class="muted">科系：多媒體設計科</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2>學習與經歷</h2>
+          <article class="entry">
+            <div class="entry-date">經歷</div>
+            <div>
+              <h3>課程專題／社團活動／打工經驗</h3>
+              <p class="placeholder">可在此補充參與過的課程專題、社團、志工服務或工作經驗；若目前沒有相關經歷，也可以刪除此區塊。</p>
+            </div>
+          </article>
+        </section>
+
+        <section class="section">
+          <h2>自我期許</h2>
+          <p>希望能持續充實自己的專業能力，累積更多實務經驗，並在每一次挑戰中學習與成長。</p>
+        </section>
+      </div>
+    </div>
+
+    <footer>謝謝您的閱讀</footer>
+  </main>
+</body>
+</html>

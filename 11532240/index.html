@@ -1,0 +1,415 @@
+
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>個人履歷</title>
+
+<style>
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    background: #eeeeff;
+    font-family: "Noto Sans TC", sans-serif;
+}
+
+.resume {
+    width: 1024px;
+    min-height: 1447px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 35% 65%;
+    overflow: hidden;
+}
+
+
+.left {
+    background: #160052;
+    color: #d8d5ff;
+    text-align: center;
+    padding: 85px 35px 40px;
+    position: relative;
+}
+
+.profile {
+    width: 310px;
+    height: 310px;
+    border-radius: 50%;
+    border: 12px solid #d8d5ff;
+    outline: 14px solid #f7f7ff;
+    object-fit: cover;
+    margin-bottom: 35px;
+}
+
+.name {
+    font-size: 48px;
+    font-weight: 900;
+    margin: 0 0 35px;
+    text-shadow: 4px 5px #7770c8;
+}
+
+.info {
+    font-size: 23px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.section-title {
+    font-size: 30px;
+    font-weight: 900;
+    letter-spacing: 8px;
+    margin: 28px 0 12px;
+}
+
+.line {
+    height: 4px;
+    background: #c9c5ff;
+    margin: 12px 0;
+    position: relative;
+}
+
+.line::before,
+.line::after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: #d8d5ff;
+    top: -3px;
+    border-radius: 2px;
+}
+
+.line::before { left: 0; }
+.line::after { right: 0; }
+
+.tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    font-size: 19px;
+    font-weight: bold;
+    line-height: 1.8;
+}
+
+.contact {
+    text-align: left;
+    font-size: 15px;
+    font-weight: bold;
+    line-height: 3;
+    margin-top: 25px;
+}
+
+
+.right {
+    background: #f7f7ff;
+    padding: 25px 45px;
+    color: #5553df;
+}
+
+.right-title {
+    font-size: 43px;
+    text-align: center;
+    font-weight: 900;
+    letter-spacing: 12px;
+    margin: 0;
+}
+
+.right .line {
+    background: #5553df;
+    margin: 15px 0 25px;
+}
+
+.right .line::before,
+.right .line::after {
+    background: #5553df;
+}
+
+.about {
+    font-size: 25px;
+    line-height: 1.8;
+    font-weight: 800;
+    text-align: justify;
+    padding: 0 12px;
+    margin-bottom: 28px;
+}
+
+.skills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.app-icon {
+    width: 62px;
+    height: 62px;
+    border-radius: 13px;
+    background: #080b4d;
+    color: #fff;
+    font-size: 30px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.skill-name {
+    font-size: 17px;
+    font-weight: 900;
+    white-space: nowrap;
+}
+
+.bar {
+    width: 136px;
+    height: 22px;
+    border-radius: 20px;
+    background: #35329a;
+    margin-top: 5px;
+    padding: 2px;
+}
+
+.progress {
+    height: 100%;
+    border-radius: 20px;
+    background: #9995ff;
+    position: relative;
+}
+
+.education {
+    font-size: 25px;
+    font-weight: 900;
+    line-height: 2;
+    padding-left: 75px;
+}
+
+.education li {
+    padding-left: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+
+<div class="resume">
+
+    
+    <aside class="left">
+
+        <img class="profile" src="images/1.jpg">
+
+        <h1 class="name">范  采  妮</h1>
+
+        <div class="line"></div>
+
+        <div class="info">
+            MBTI：INTJ-T<br>
+            生日：　8/12<br>
+            性別：　非二元
+        </div>
+
+        <div class="line"></div>
+
+        <h2 class="section-title">專 長</h2>
+        <div class="line"></div>
+
+        <div class="tags">
+            ● 繪畫　 ● 剪輯　 ● 創意
+        </div>
+
+        <h2 class="section-title">興 趣</h2>
+        <div class="line"></div>
+
+        <div class="tags">
+            ● 唱歌　 ● 經營頻道<br>
+            ● Cosplay　 ● 角色設計
+        </div>
+
+        <h2 class="section-title">聯 絡 方 式</h2>
+        <div class="line"></div>
+
+        <div class="contact">
+            ☎　0909438726<br>
+            ✉　11532240@gm.chihlee.edu.tw<br>
+            📍　新北市板橋區文化路一段313號
+        </div>
+
+    </aside>
+
+    
+    <main class="right">
+
+        <h2 class="right-title">關於自己</h2>
+        <div class="line"></div>
+
+        <p class="about">
+            是個很大的社恐，剛開始認識時對人內斂，
+            但久了相處下來會發現其實很抽象話也很多。
+            對自己感興趣的事物會想辦法挖掘更深的知識。
+            遇事冷靜處理，對一些事會有屬於自己的評價或見解。
+        </p>
+
+        <h2 class="right-title">軟體熟練度</h2>
+        <div class="line"></div>
+
+        <div class="skills">
+
+            <div>
+                <div class="skill">
+                    <div class="app-icon">Ai</div>
+                    <div>
+                        <div class="skill-name">Adobe Illustrator</div>
+                        <div class="bar">
+                            <div class="progress" style="width:70%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">Ps</div>
+                    <div>
+                        <div class="skill-name">Adobe Photoshop</div>
+                        <div class="bar">
+                            <div class="progress" style="width:45%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">Ae</div>
+                    <div>
+                        <div class="skill-name">Adobe After Effects</div>
+                        <div class="bar">
+                            <div class="progress" style="width:15%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">Pr</div>
+                    <div>
+                        <div class="skill-name">Adobe Premiere</div>
+                        <div class="bar">
+                            <div class="progress" style="width:30%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">Ib</div>
+                    <div>
+                        <div class="skill-name">Ibis Paint</div>
+                        <div class="bar">
+                            <div class="progress" style="width:95%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="skill">
+                    <div class="app-icon">AM</div>
+                    <div>
+                        <div class="skill-name">Alight Motion</div>
+                        <div class="bar">
+                            <div class="progress" style="width:85%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">CC</div>
+                    <div>
+                        <div class="skill-name">Cute Cut</div>
+                        <div class="bar">
+                            <div class="progress" style="width:90%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">MN</div>
+                    <div>
+                        <div class="skill-name">Motion Ninja</div>
+                        <div class="bar">
+                            <div class="progress" style="width:40%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">FC</div>
+                    <div>
+                        <div class="skill-name">Flipa Clip</div>
+                        <div class="bar">
+                            <div class="progress" style="width:60%"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill">
+                    <div class="app-icon">TP</div>
+                    <div>
+                        <div class="skill-name">TV Paint</div>
+                        <div class="bar">
+                            <div class="progress" style="width:55%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <h2 class="right-title" style="margin-top:35px">
+            就讀經歷
+        </h2>
+
+        <div class="line"></div>
+
+        <ul class="education">
+            <li>私立吉尼爾歌德幼兒園</li>
+            <li>桃園市中壢區中平國小</li>
+            <li>桃園市立過嶺國民中學</li>
+            <li>桃園市立觀音高級中等學校</li>
+        </ul>
+
+    </main>
+
+</div>
+
+</body>
+</html>

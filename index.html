@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>日設一B 計算邏輯與程式應用｜學生作品觀摩展覽</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+ <div class="bg-overlay"></div>
+  
+  <header class="header">
+    <div class="container">
+      <div class="badge-title">DESIGN & CODE PORTFOLIO SHOWCASE</div>
+      <h1>日設一B 計算邏輯與程式應用</h1>
+      <p class="subtitle">期中學生作品觀摩與履歷展示目錄</p>
+      
+      <div class="filter-wrapper">
+        <div class="search-box">
+          <input type="text" id="searchInput" placeholder="搜尋學號或姓名..." onkeyup="filterStudents()">
+        </div>
+        <div class="filter-buttons">
+          <button class="filter-btn active" onclick="setFilter('all', this)">全部 (58)</button>
+          <button class="filter-btn" onclick="setFilter('submitted', this)">已繳交 (49)</button>
+          <button class="filter-btn" onclick="setFilter('missing', this)">缺交 (9)</button>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <div class="student-grid" id="studentGrid"></div>
+  </main>
+
+  <script>
+    const students = [
+      { id: "11032139", name: "彭威郡", submitted: false },
+      { id: "110321S1", folderId: "110321S1", name: "馮裴維", submitted: true }, // 已修正為已繳交 (對應資料夾 11032181)
+      { id: "11132171", name: "黃詩婷", submitted: true },
+      { id: "11432270", name: "游子瑜", submitted: true },
+      { id: "11532201", name: "簡浩全", submitted: true },
+      { id: "11532202", name: "王詩詒", submitted: true },
+      { id: "11532203", name: "楊幼慈", submitted: true },
+      { id: "11532204", name: "許彩庭", submitted: true },
+      { id: "11532205", name: "陳葦姍", submitted: false },
+      { id: "11532206", name: "廖佳辰", submitted: true },
+      { id: "11532207", name: "張馨云", submitted: true },
+      { id: "11532208", name: "陳柏均", submitted: true },
+      { id: "11532209", name: "李柏均", submitted: true },
+      { id: "11532210", name: "游舒晴", submitted: true },
+      { id: "11532211", name: "黃子菲", submitted: true },
+      { id: "11532212", name: "鄭云婕", submitted: true },
+      { id: "11532213", name: "陳品翰", submitted: true },
+      { id: "11532214", name: "謝沛妤", submitted: true },
+      { id: "11532215", name: "許育綺", submitted: true },
+      { id: "11532216", name: "林語緁", submitted: true },
+      { id: "11532217", name: "洪億紋", submitted: true },
+      { id: "11532218", name: "周潔", submitted: true },
+      { id: "11532219", name: "游宜蓁", submitted: true },
+      { id: "11532220", name: "李宜臻", submitted: true },
+      { id: "11532221", name: "楊于珊", submitted: true },
+      { id: "11532222", name: "陳冠綸", submitted: true },
+      { id: "11532223", name: "周媰", submitted: true },
+      { id: "11532224", name: "蔡沛澄", submitted: true },
+      { id: "11532225", name: "余辰昕", submitted: true },
+      { id: "11532226", name: "陳亮妤", submitted: false },
+      { id: "11532227", name: "林楷鈞", submitted: true },
+      { id: "11532228", name: "葉昀蓁", submitted: true },
+      { id: "11532229", name: "駱慶薇", submitted: true },
+      { id: "11532230", name: "魏言真", submitted: true },
+      { id: "11532231", name: "何蓓宸", submitted: true },
+      { id: "11532232", name: "李沁禹", submitted: true },
+      { id: "11532233", name: "楊怡馨", submitted: true },
+      { id: "11532234", name: "周慧柔", submitted: true },
+      { id: "11532235", name: "陳美棻", submitted: true },
+      { id: "11532236", name: "陳仁杰", submitted: true },
+      { id: "11532237", name: "黃晴媗", submitted: true },
+      { id: "11532238", name: "黃榆媃", submitted: true },
+      { id: "11532239", name: "郭子寧", submitted: true },
+      { id: "11532240", name: "范采妮", submitted: true },
+      { id: "11532241", name: "王鈺淨", submitted: true },
+      { id: "11532243", name: "劉韋彤", submitted: true },
+      { id: "11532244", name: "李宗叡", submitted: true },
+      { id: "11532246", name: "林玟伶", submitted: true },
+      { id: "11532247", name: "陳柔瑀", submitted: true },
+      { id: "11532248", name: "林廷璇", submitted: true },
+      { id: "11532249", name: "陳芝羽", submitted: true },
+      { id: "11532250", name: "林洋靖", submitted: true },
+      { id: "11532252", name: "洪子琂", submitted: true },
+      { id: "11532253", name: "葉耀良", submitted: true },
+      { id: "11532254", name: "官沚蓉", submitted: true },
+      { id: "11532255", name: "蘇宜軒", submitted: true },
+      { id: "11532290", name: "鄧泳浠", submitted: true },
+      { id: "11532291", name: "曾籽堯", submitted: true }
+    ];
+
+    let currentStatusFilter = 'all';
+
+    function renderStudents(data) {
+      const grid = document.getElementById("studentGrid");
+      grid.innerHTML = data.map(s => {
+        const folder = s.folderId || s.id;
+        const thumbUrl = `./${folder}/thumbnail.png`;
+        if (s.submitted) {
+          return `
+            <a href="./${folder}/index.html" class="student-card submitted" target="_blank">
+              <div class="thumbnail-container">
+                <img src="${thumbUrl}" alt="${s.name}的作品縮圖" onerror="this.onerror=null; this.parentElement.classList.add('no-thumb'); this.style.display='none';">
+                <div class="thumb-placeholder">📄 檢視個人履歷與作品</div>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  <span class="student-id">${s.id}</span>
+                  <span class="badge badge-success">已繳交</span>
+                </div>
+                <h3 class="student-name">${s.name}</h3>
+              </div>
+            </a>
+          `;
+        } else {
+          return `
+            <div class="student-card missing">
+              <div class="thumbnail-container no-thumb">
+                <div class="thumb-placeholder">📁 尚未提交</div>
+              </div>
+              <div class="card-info">
+                <div class="card-header">
+                  <span class="student-id">${s.id}</span>
+                  <span class="badge badge-danger">缺交</span>
+                </div>
+                <h3 class="student-name">${s.name}</h3>
+              </div>
+            </div>
+          `;
+        }
+      }).join('');
+    }
+
+    function setFilter(status, btn) {
+      currentStatusFilter = status;
+      document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterStudents();
+    }
+
+    function filterStudents() {
+      const query = document.getElementById("searchInput").value.toLowerCase();
+      const filtered = students.filter(s => {
+        const matchesQuery = s.id.toLowerCase().includes(query) || s.name.toLowerCase().includes(query);
+        const matchesStatus = currentStatusFilter === 'all' ||
+                              (currentStatusFilter === 'submitted' && s.submitted) ||
+                              (currentStatusFilter === 'missing' && !s.submitted);
+        return matchesQuery && matchesStatus;
+      });
+      renderStudents(filtered);
+    }
+
+    renderStudents(students);
+  </script>
+</body>
+</html>

@@ -1,0 +1,333 @@
+/* 郭子寧｜11532239
+   由原始雙欄履歷範本改編：中文內容、Y2K 配色、本機背景圖與響應式置中版面。
+   所有圖片均使用相對路徑，解壓縮後直接開啟 index.html 即可。 */
+:root {
+  --ink: #30233f;
+  --muted: #6c5c7d;
+  --purple: #704a9c;
+  --deep-purple: #49305f;
+  --lavender: #e4d5fa;
+  --pink: #f6d5e9;
+  --paper: #fffcff;
+  --border: #d9cbe7;
+  --sidebar-w: 280px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+body {
+  min-height: 100vh;
+  /* 作業要求：body 加上背景圖片，履歷表水平置中。 */
+  background-color: #e7def4;
+  background-image: url("images/background.svg");
+  background-position: center top;
+  background-size: 1440px 1104px;
+  background-repeat: repeat;
+  background-attachment: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 48px 24px;
+  color: var(--ink);
+  font-family: "Noto Sans CJK TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+  font-size: 14px;
+  line-height: 1.8;
+  -webkit-font-smoothing: antialiased;
+}
+a { color: inherit; text-decoration: none; }
+svg { display: block; }
+a:focus-visible { outline: 3px solid #8446b7; outline-offset: 5px; border-radius: 4px; }
+::selection { background: #e9c4ef; color: #30233f; }
+.skip-link { position: fixed; left: 20px; top: -80px; z-index: 10; padding: 10px 16px; background: #fff; border: 2px solid var(--purple); border-radius: 10px; }
+.skip-link:focus { top: 14px; }
+
+/* 復古視窗外框：銀色高光、淡紫陰影與圓角。 */
+.page {
+  position: relative;
+  width: 960px;
+  max-width: 100%;
+  background: var(--paper);
+  border: 1px solid #baa8ce;
+  border-radius: 22px;
+  box-shadow: 0 24px 70px #684d8629, 7px 8px 0 #c6b1e13b, inset 0 0 0 1px #fff;
+  overflow: hidden;
+}
+.window-bar {
+  min-height: 46px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 8px 23px;
+  border-bottom: 1px solid #bcacce;
+  background: linear-gradient(180deg, #fff 0%, #f7f4fb 40%, #ded7e8 53%, #f4eef9 100%);
+  color: #51415f;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .09em;
+}
+.window-title, .window-meta { display: flex; align-items: center; gap: 10px; }
+.mini-spark { font-size: 20px; line-height: 1; color: #825da7; }
+.file-number { font-size: 11px; letter-spacing: .17em; color: #6d5c7e; }
+.window-dots { display: flex; gap: 6px; margin-left: 7px; }
+.window-dots i { width: 11px; height: 11px; border-radius: 50%; border: 1px solid #b4a2c5; background: linear-gradient(#fff, #d5c4e6); box-shadow: inset 0 1px 2px #fff; }
+.window-dots i:nth-child(2) { background: linear-gradient(#fff, #f1c9e4); }
+.window-dots i:nth-child(3) { background: linear-gradient(#fff, #b9a0dc); }
+
+/* 姓名橫幅與照片，保留範本左照右名的視覺關係。 */
+.band {
+  position: relative;
+  display: grid;
+  grid-template-columns: var(--sidebar-w) minmax(0, 1fr);
+  align-items: center;
+  gap: 0;
+  min-height: 322px;
+  padding: 29px 0 28px;
+  background: linear-gradient(112deg, #e9ddfa 0%, #d7bdf0 46%, #edd5ed 81%, #f4ddec 100%);
+  isolation: isolate;
+}
+.hero-grid { position: absolute; inset: 0; z-index: -1; opacity: .36; background-image: linear-gradient(#fff8 1px, transparent 1px), linear-gradient(90deg, #fff8 1px, transparent 1px); background-size: 34px 34px; mask-image: linear-gradient(90deg, #000, transparent 80%); -webkit-mask-image: linear-gradient(90deg, #000, transparent 80%); }
+.hero-orbit { position: absolute; width: 240px; height: 180px; right: -66px; bottom: -3px; fill: none; stroke: #fff9; stroke-width: 1.2; z-index: -1; }
+.hero-orbit circle { fill: #fff7; stroke: none; }
+.photo-card {
+  position: relative;
+  width: 220px;
+  margin: 0 auto;
+  padding: 8px 8px 0;
+  background: #fffcff;
+  border: 1px solid #d1bfdc;
+  border-radius: 5px;
+  transform: rotate(-4deg);
+  box-shadow: 0 8px 16px #674c7f2b, 3px 3px 0 #ffffff75;
+}
+.photo-frame { height: 222px; overflow: hidden; border-radius: 1px; background: #ddd2e3; }
+.photo { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 39% 44%; }
+.photo-card figcaption { display: flex; justify-content: space-between; align-items: center; padding: 8px 3px 9px; font-size: 10px; font-weight: 700; letter-spacing: .2em; color: #756080; }
+.photo-star { font-size: 17px; line-height: 1; color: #9c7ab9; }
+.photo-tape { position: absolute; top: -13px; left: 68px; width: 72px; height: 25px; transform: rotate(7deg); background: repeating-linear-gradient(90deg, #ece1fc9c 0 3px, #f8efffac 3px 5px); border: 1px solid #ffffff7a; box-shadow: 0 1px 3px #8a6d9a13; }
+.intro { position: relative; min-width: 0; padding: 5px 40px 8px 28px; }
+.eyebrow { display: flex; align-items: center; gap: 8px; font-size: 12px; font-weight: 700; color: #604373; letter-spacing: .18em; }
+.eyebrow > span { width: 6px; height: 6px; border-radius: 50%; background: #78529c; box-shadow: 0 0 0 4px #ffffff61; }
+.intro h1 { position: relative; width: fit-content; margin: 8px 0 7px; font-size: 64px; line-height: 1.35; letter-spacing: .16em; font-weight: 900; color: #3c2452; text-shadow: 0 2px 0 #f9effc; }
+.name-spark { display: inline-block; position: absolute; top: -3px; right: -33px; font-size: 25px; line-height: 1; letter-spacing: 0; color: #fffafc; text-shadow: 1px 1px 0 #9c7ab7; transform: rotate(9deg); }
+.job-title { color: #5d426f; font-size: 15px; font-weight: 500; letter-spacing: .08em; }
+.mobile-break { display: none; }
+.intro-tags { display: flex; align-items: center; gap: 9px; margin-top: 17px; }
+.intro-tags > span:not(.tag-cross) { padding: 3px 12px; border: 1px solid #b89acb; border-radius: 20px; background: #fff9; box-shadow: inset 0 1px 0 #fff; font-size: 11px; letter-spacing: .09em; color: #614078; }
+.tag-cross { color: #87629f; font-size: 16px; }
+.school-label { display: flex; gap: 7px; align-items: center; margin-top: 19px; color: #61466f; font-size: 12px; letter-spacing: .015em; }
+.school-label svg { width: 19px; height: 19px; flex: none; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.school-separator { margin: 0 6px; color: #a585b6; }
+.chrome-spark { position: absolute; top: 26px; right: 25px; width: 83px; height: 83px; transform: rotate(12deg); filter: drop-shadow(0 3px 2px #76538d20); pointer-events: none; }
+.band-bottom { position: absolute; bottom: 0; left: 0; right: 0; height: 5px; border-top: 1px solid #ffffffb3; background: linear-gradient(90deg, #f5eefa, #c9b6db 25%, #fff 50%, #dcc4e0 75%, #f6effa); }
+
+/* 章節捷徑可直接跳至對應區塊，不需 JavaScript。 */
+.section-nav { display: flex; align-items: center; gap: 24px; min-height: 48px; padding: 8px 31px; background: #fcf8fe; border-bottom: 1px solid var(--border); color: #6e5680; font-size: 12px; }
+.nav-caption { margin-right: auto; font-size: 11px; color: #7e698c; letter-spacing: .17em; }
+.section-nav a { position: relative; padding: 1px 0; transition: color .15s ease; }
+.section-nav a::after { content: ""; position: absolute; left: 0; right: 0; bottom: -4px; height: 2px; background: #b08ecf; transform: scaleX(0); transition: transform .15s ease; }
+.section-nav a:hover { color: #78419e; }
+.section-nav a:hover::after { transform: scaleX(1); }
+.nav-spark { margin-left: 4px; color: #aa87c1; font-size: 18px; line-height: 1; }
+
+/* 雙欄以 CSS Grid 排版，避免原範本絕對定位造成文字重疊。 */
+.resume-layout { display: grid; grid-template-columns: var(--sidebar-w) minmax(0, 1fr); }
+.sidebar { padding: 30px 29px 25px; background: linear-gradient(180deg, #f0e8f8 0%, #f5eefa 60%, #efe6f7 100%); border-right: 1px solid #e0d3ec; }
+.sidebar .block + .block { margin-top: 26px; }
+.sidebar h2 { display: flex; align-items: center; gap: 8px; font-size: 15px; font-weight: 700; letter-spacing: .1em; color: #4f3563; padding-bottom: 10px; border-bottom: 1px solid #d8c7e5; }
+.sidebar h2 > span { color: #9870b8; font-size: 14px; }
+.details { margin-top: 13px; }
+.details > div { display: grid; grid-template-columns: 41px minmax(0, 1fr); align-items: baseline; gap: 12px; margin-top: 9px; font-size: 12px; }
+.details dt { color: #816c91; }
+.details dd { color: #4d375d; font-weight: 500; overflow-wrap: anywhere; }
+.student-id { font-variant-numeric: tabular-nums; letter-spacing: .13em; font-weight: 700 !important; }
+.contact { list-style: none; margin-top: 15px; }
+.contact li { display: flex; align-items: center; gap: 11px; }
+.contact li + li { margin-top: 15px; }
+.icon { flex: none; width: 34px; height: 34px; display: grid; place-items: center; border: 1px solid #d2bedf; border-radius: 10px; color: #7f599e; background: linear-gradient(145deg, #fff, #eadcf4); box-shadow: 0 2px 0 #ffffff8c; }
+.icon svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+.contact li > div { min-width: 0; }
+.contact-label { display: block; color: #7b668b; font-size: 10px; letter-spacing: .08em; line-height: 1.7; }
+.contact-value { display: block; color: #634d76; font-size: 12px; line-height: 1.8; overflow-wrap: anywhere; }
+.contact-value:hover { color: var(--purple); text-decoration: underline; text-underline-offset: 3px; }
+.contact-value:focus-visible { outline: 2px solid var(--purple); outline-offset: 3px; border-radius: 3px; }
+.contact-phone { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.field-tags { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 15px; }
+.field-tags span { border: 1px solid #cfb7e0; border-radius: 6px; background: #fff9; color: #71518a; padding: 3px 10px; font-size: 11px; }
+.sidebar-note { color: #7b668b; font-size: 12px; line-height: 1.9; margin-top: 12px; }
+.sidebar-sticker { margin: 32px auto 0; width: 182px; text-align: center; color: #9675ae; }
+.sidebar-sticker svg { width: 122px; height: 80px; margin: 0 auto 2px; }
+.sidebar-sticker ellipse { fill: none; stroke: #bd9bd1; stroke-width: 1; }
+.sidebar-sticker path { fill: #ceb2e3; stroke: #fff; stroke-width: .8; }
+.sidebar-sticker > span { font-size: 10px; letter-spacing: .13em; }
+
+.content { padding: 30px 35px 32px; background: #fffcff; min-width: 0; }
+.content .block + .block { margin-top: 27px; }
+.section-heading { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
+.section-number { flex: none; width: 28px; height: 28px; display: grid; place-items: center; border-radius: 8px; border: 1px solid #cfb9df; background: linear-gradient(145deg, #fff, #e7d4f3); color: #79549a; font-size: 11px; font-weight: 700; letter-spacing: .02em; box-shadow: inset 0 1px 0 #fff; }
+.section-heading h2 { flex: none; font-size: 17px; line-height: 1.5; color: #49305d; letter-spacing: .08em; font-weight: 700; }
+.heading-line { flex: 1; height: 1px; background: #dfd0e8; margin-left: 5px; }
+.heading-spark { color: #a783c1; font-size: 19px; line-height: 1; }
+.about-text { color: #6c5a79; font-size: 13px; line-height: 2; text-align: justify; letter-spacing: .02em; }
+.about-text strong { color: #5a3b73; font-weight: 700; }
+.timeline { position: relative; margin-left: 8px; padding-left: 23px; }
+.timeline::before { content: ""; position: absolute; left: 0; top: 25px; bottom: 50px; width: 1px; background: linear-gradient(#b797d0, #d9c4e7); }
+.entry { position: relative; padding: 13px 17px 14px; border: 1px solid #e4d7ec; border-radius: 12px; background: linear-gradient(110deg, #f7effc, #fffcff 78%); }
+.entry + .entry { margin-top: 10px; }
+.entry:nth-child(2) { background: linear-gradient(110deg, #fcf0f7, #fffcff 78%); border-color: #ead9e8; }
+.entry:nth-child(3) { background: linear-gradient(110deg, #f3f0f9, #fffcff 78%); }
+.timeline-dot { position: absolute; top: 22px; left: -28px; width: 10px; height: 10px; border-radius: 50%; background: #ad88c7; border: 2px solid #fffcff; box-shadow: 0 0 0 1px #c8acd9; }
+.entry:nth-child(2) .timeline-dot { background: #cc9cbd; box-shadow: 0 0 0 1px #dab1ce; }
+.entry:nth-child(3) .timeline-dot { background: #aaa0c8; box-shadow: 0 0 0 1px #c7bddb; }
+.entry-top { display: flex; justify-content: space-between; align-items: center; gap: 10px; margin-bottom: 4px; }
+.stage { display: inline-flex; align-items: center; font-size: 10px; line-height: 1.8; font-weight: 700; color: #815c9d; letter-spacing: .13em; }
+.entry:nth-child(2) .stage { color: #986580; }
+.entry:nth-child(3) .stage { color: #7d6c96; }
+.entry-index { font-size: 9px; font-variant-numeric: tabular-nums; color: #9c88ac; letter-spacing: .1em; }
+.entry h3 { font-size: 17px; color: #4c345f; font-weight: 700; line-height: 1.6; letter-spacing: .06em; }
+.meta { margin-top: 1px; font-size: 12px; color: #7b648b; line-height: 1.9; }
+.meta-note { color: #8b7799; font-size: 11px; }
+.learning-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.learning-card { padding: 14px 8px 13px; text-align: center; border: 1px solid #e3d3ed; border-radius: 12px; background: #f8f1fc; }
+.learning-card:nth-child(2) { background: #fcf2f8; border-color: #ebd8e6; }
+.learning-card:nth-child(3) { background: #f4f0fa; border-color: #ded7ed; }
+.learning-card svg { width: 27px; height: 27px; margin: 0 auto 7px; fill: none; stroke: #9c78b5; stroke-width: 1.35; stroke-linecap: round; stroke-linejoin: round; }
+.learning-card:nth-child(2) svg { stroke: #b182a1; }
+.learning-card:nth-child(3) svg { stroke: #9080af; }
+.learning-card h3 { font-size: 12px; font-weight: 700; color: #644879; letter-spacing: .04em; }
+.learning-card p { margin-top: 4px; font-size: 10px; color: #836d91; line-height: 1.9; }
+
+.page-footer { display: flex; align-items: center; justify-content: space-between; gap: 15px; padding: 12px 30px; border-top: 1px solid #d8cae5; background: linear-gradient(180deg, #fbf8fd, #ede4f4); color: #80698e; font-size: 10px; letter-spacing: .08em; }
+.footer-spark { margin-right: 7px; color: #ad83c1; }
+.footer-divider { margin: 0 6px; color: #b29bc0; }
+.page-footer a { display: flex; align-items: center; gap: 8px; }
+.page-footer a:hover { color: #734b91; }
+.page-footer a > span { font-size: 16px; line-height: 1; }
+
+/* 平板：縮小欄寬，文字保持自然流動。 */
+@media (max-width: 880px) {
+  :root { --sidebar-w: 240px; }
+  body { padding: 30px 18px; }
+  .photo-card { width: 190px; }
+  .photo-frame { height: 207px; }
+  .band { min-height: 303px; }
+  .intro { padding-left: 22px; padding-right: 22px; }
+  .intro h1 { font-size: 54px; }
+  .chrome-spark { width: 65px; height: 65px; top: 20px; right: 16px; }
+  .sidebar { padding: 28px 23px; }
+  .content { padding: 28px; }
+  .school-label { font-size: 11px; }
+  .school-separator { margin: 0 3px; }
+  .section-nav { padding-left: 25px; padding-right: 25px; }
+}
+
+/* 手機：由雙欄改成單欄，避免文字、照片與版面溢出。 */
+@media (max-width: 680px) {
+  body { padding: 18px 12px; background-size: 1000px auto; }
+  .page { border-radius: 17px; }
+  .window-bar { padding: 9px 14px; min-height: 42px; font-size: 10px; letter-spacing: .04em; }
+  .file-number { font-size: 10px; letter-spacing: .08em; }
+  .window-dots { display: none; }
+  .band { grid-template-columns: 1fr; gap: 28px; padding: 29px 20px 28px; }
+  .intro { grid-row: 1; text-align: center; padding: 0; }
+  .eyebrow { justify-content: center; font-size: 10px; letter-spacing: .12em; }
+  .intro h1 { margin: 8px auto; font-size: 53px; }
+  .name-spark { right: -24px; top: 2px; font-size: 21px; }
+  .job-title { font-size: 13px; letter-spacing: .04em; }
+  .intro-tags { justify-content: center; margin-top: 13px; }
+  .intro-tags > span:not(.tag-cross) { font-size: 10px; }
+  .school-label { justify-content: center; margin-top: 15px; font-size: 10px; gap: 5px; }
+  .school-label svg { width: 16px; height: 16px; }
+  .chrome-spark { width: 44px; height: 44px; top: auto; right: 28px; bottom: 27px; }
+  .hero-orbit { bottom: 4px; right: -70px; width: 220px; }
+  .photo-card { width: 199px; transform: rotate(-3deg); }
+  .photo-frame { height: 204px; }
+  .photo-card figcaption { font-size: 9px; }
+  .section-nav { gap: 0; justify-content: space-around; padding: 10px 15px; font-size: 11px; min-height: 43px; }
+  .nav-caption, .nav-spark { display: none; }
+  .resume-layout { grid-template-columns: 1fr; }
+  .content { grid-row: 1; padding: 26px 23px; }
+  .section-heading { gap: 8px; margin-bottom: 13px; }
+  .section-heading h2 { font-size: 15px; letter-spacing: .04em; }
+  .section-number { width: 26px; height: 26px; font-size: 10px; }
+  .about-text { font-size: 12px; }
+  .entry { padding: 12px 15px; }
+  .entry h3 { font-size: 16px; }
+  .meta { font-size: 11px; }
+  .learning-grid { gap: 7px; }
+  .learning-card { padding: 13px 4px; }
+  .learning-card h3 { font-size: 11px; letter-spacing: 0; }
+  .learning-card p { font-size: 9px; }
+  .sidebar { padding: 25px 24px; border-right: 0; border-top: 1px solid #dfd1e9; display: grid; grid-template-columns: 1fr 1fr; gap: 24px 18px; }
+  .sidebar .block + .block { margin-top: 0; }
+  .sidebar h2 { font-size: 13px; letter-spacing: .04em; gap: 6px; }
+  .details > div { font-size: 11px; grid-template-columns: 27px minmax(0, 1fr); gap: 8px; }
+  .student-id { letter-spacing: .04em; }
+  .contact li { gap: 8px; }
+  .icon { width: 29px; height: 29px; border-radius: 9px; }
+  .icon svg { width: 15px; height: 15px; }
+  .contact-label { font-size: 9px; }
+  .contact-value { font-size: 11px; }
+  .field-tags { gap: 6px; }
+  .field-tags span { padding: 3px 8px; font-size: 10px; }
+  .sidebar-note { font-size: 11px; }
+  .sidebar-sticker { width: auto; max-width: 100%; margin: auto 0; }
+  .sidebar-sticker svg { width: 105px; height: 72px; }
+  .sidebar-sticker > span { font-size: 8px; letter-spacing: .05em; }
+  .page-footer { padding: 12px 20px; font-size: 9px; letter-spacing: .02em; }
+}
+@media (max-width: 360px) {
+  .content { padding: 24px 17px; }
+  .intro h1 { font-size: 48px; }
+  .job-title { font-size: 12px; }
+  .school-label { font-size: 9px; }
+  .school-separator { margin: 0 1px; }
+  .sidebar { padding: 24px 19px; gap: 22px 13px; }
+  .icon { width: 25px; height: 25px; }
+  .contact li { gap: 6px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after { transition: none !important; }
+}
+
+/* 列印時保留配色、移除頁外背景並回復雙欄。 */
+@page { size: A4; margin: 9mm; }
+@media print {
+  :root { --sidebar-w: 55mm; }
+  html { scroll-behavior: auto; }
+  body { display: block; padding: 0; background: none; font-size: 10pt; }
+  .page { width: 100%; max-width: none; border-radius: 4mm; box-shadow: none; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  .window-bar { min-height: 9mm; padding: 1mm 5mm; }
+  .band { grid-template-columns: var(--sidebar-w) minmax(0, 1fr); min-height: 65mm; padding: 5mm 0; gap: 0; }
+  .photo-card { width: 43mm; }
+  .photo-frame { height: 43mm; }
+  .photo-card figcaption { padding: 1mm; }
+  .intro { grid-row: auto; text-align: left; padding: 0 7mm; }
+  .intro h1 { margin: 2mm 0; font-size: 38pt; }
+  .eyebrow { justify-content: flex-start; font-size: 8pt; }
+  .intro-tags { justify-content: flex-start; margin-top: 3mm; }
+  .job-title { font-size: 9pt; }
+  .school-label { justify-content: flex-start; margin-top: 3mm; font-size: 7.5pt; }
+  .chrome-spark { width: 16mm; height: 16mm; right: 4mm; top: 4mm; bottom: auto; }
+  .section-nav { display: none; }
+  .resume-layout { grid-template-columns: var(--sidebar-w) minmax(0, 1fr); }
+  .sidebar { display: block; padding: 6mm 5mm; border-top: 0; border-right: 1px solid #e0d3ec; }
+  .sidebar .block + .block { margin-top: 6mm; }
+  .sidebar h2 { font-size: 10pt; }
+  .details > div { font-size: 8pt; }
+  .content { grid-row: auto; padding: 6mm 7mm; }
+  .content .block + .block { margin-top: 5mm; }
+  .section-heading { margin-bottom: 3mm; }
+  .section-heading h2 { font-size: 11pt; }
+  .about-text { font-size: 8.5pt; line-height: 1.9; }
+  .entry { padding: 2.2mm 4mm; break-inside: avoid; }
+  .entry + .entry { margin-top: 2mm; }
+  .entry h3 { font-size: 11pt; }
+  .learning-card { padding: 3mm 1mm; break-inside: avoid; }
+  .learning-card h3 { font-size: 8pt; }
+  .learning-card p { font-size: 7pt; }
+  .sidebar-sticker { margin: 6mm auto 0; }
+  .page-footer { padding: 2mm 5mm; }
+  .page-footer a, .skip-link { display: none; }
+}

@@ -1,0 +1,168 @@
+/* 基礎設定與字體 */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family: 'Noto Serif TC', 'PMingLiU', '新細明體', serif;
+    color: #2b2b2b;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* 履歷主容器（模擬 A4 比例雙欄版面） */
+.resume-container {
+    display: flex;
+    width: 100%;
+    max-width: 820px;
+    min-height: 1120px;
+    background-color: #f4f2ed;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* 左側欄位 */
+.left-column {
+    width: 40%;
+    background-color: #e9e4db;
+    padding: 65px 40px 60px 45px;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    font-size: 32px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 28px;
+    color: #222222;
+}
+
+/* 照片框 */
+.photo-box {
+    width: 175px;
+    height: 225px;
+    background-color: #dcd6cc;
+    margin-bottom: 26px;
+    overflow: hidden;
+}
+
+.photo-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* 學歷區塊 */
+.education {
+    font-size: 14.5px;
+    line-height: 1.7;
+    margin-bottom: 34px;
+    color: #333333;
+}
+
+/* 資訊區塊共用樣式 */
+.info-block {
+    margin-bottom: 32px;
+}
+
+.info-block h2 {
+    font-size: 17px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #222222;
+}
+
+.info-block ul {
+    list-style: none;
+}
+
+.info-block ul li {
+    font-size: 14.5px;
+    line-height: 1.85;
+    padding-left: 14px;
+    position: relative;
+    color: #333333;
+}
+
+/* 自訂圓點項目符號 */
+.info-block ul li::before {
+    content: "·";
+    position: absolute;
+    left: 2px;
+    top: 0;
+    font-weight: bold;
+}
+
+/* 右側欄位 */
+.right-column {
+    width: 60%;
+    background-color: #f4f2ed;
+    padding: 165px 55px 50px 50px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.profile-header {
+    margin-bottom: 85px;
+}
+
+.name {
+    font-size: 38px;
+    font-weight: 700;
+    letter-spacing: 6px;
+    margin-bottom: 12px;
+    color: #1f1f1f;
+}
+
+.birthday {
+    font-size: 16px;
+    color: #333333;
+    letter-spacing: 1px;
+}
+
+.right-column .info-block {
+    margin-bottom: 42px;
+}
+
+.right-column .info-block ul li {
+    line-height: 1.95;
+}
+
+/* 右下角頁碼 */
+.page-number {
+    margin-top: auto;
+    align-self: flex-end;
+    font-size: 15px;
+    color: #333333;
+}
+
+/* 響應式設計：手機版面自動轉為單欄 */
+@media (max-width: 768px) {
+    .resume-container {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .left-column,
+    .right-column {
+        width: 100%;
+        padding: 40px 30px;
+    }
+
+    .profile-header {
+        margin-bottom: 40px;
+    }
+
+    .page-number {
+        margin-top: 30px;
+    }
+}

@@ -1,0 +1,259 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;600;700;800&display=swap');
+
+:root {
+  --green: #24483f;
+  --green-light: #dce8df;
+  --cream: #fbf8f0;
+  --paper: #fffefa;
+  --ink: #26352f;
+  --muted: #718078;
+  --line: #e5e9e1;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  padding: 48px 20px;
+  font-family: "Noto Sans TC", "Microsoft JhengHei", sans-serif;
+  color: var(--ink);
+  background:
+    linear-gradient(rgba(24, 48, 41, 0.68), rgba(24, 48, 41, 0.68)),
+    url("images/profile.jpg") center / cover fixed no-repeat;
+}
+
+.resume {
+  width: min(920px, 100%);
+  margin: 0 auto;
+  overflow: hidden;
+  background: var(--paper);
+  border-radius: 18px;
+  box-shadow: 0 24px 70px rgba(10, 28, 22, 0.28);
+}
+
+.hero {
+  min-height: 245px;
+  padding: 48px 58px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 32px;
+  color: white;
+  background: var(--green);
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 220px;
+  height: 220px;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 50%;
+  right: 105px;
+  top: -105px;
+}
+
+.hero-text {
+  position: relative;
+  z-index: 1;
+}
+
+.eyebrow {
+  margin: 0 0 12px;
+  color: #c6d8cb;
+  letter-spacing: 4px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(32px, 5vw, 46px);
+  letter-spacing: 5px;
+  font-weight: 800;
+}
+
+.subtitle {
+  margin: 12px 0 0;
+  color: #dce8df;
+  letter-spacing: 2px;
+}
+
+.profile-photo {
+  width: 158px;
+  height: 158px;
+  object-fit: cover;
+  object-position: center 35%;
+  border-radius: 50%;
+  border: 6px solid rgba(255,255,255,.88);
+  box-shadow: 0 8px 24px rgba(0,0,0,.2);
+  position: relative;
+  z-index: 1;
+}
+
+.resume-grid {
+  display: grid;
+  grid-template-columns: 290px 1fr;
+}
+
+.sidebar {
+  padding: 42px 34px;
+  background: var(--cream);
+}
+
+.main-content {
+  padding: 42px 48px;
+}
+
+.section {
+  margin-bottom: 34px;
+}
+
+.section:last-child {
+  margin-bottom: 0;
+}
+
+h2 {
+  margin: 0 0 18px;
+  padding-left: 13px;
+  border-left: 4px solid #8aa895;
+  color: var(--green);
+  font-size: 19px;
+  letter-spacing: 1px;
+}
+
+p {
+  margin: 0;
+  line-height: 1.9;
+  font-size: 14px;
+}
+
+.contact-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.contact-list li {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+  font-size: 14px;
+  overflow-wrap: anywhere;
+}
+
+.contact-label {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+a {
+  color: var(--green);
+  text-decoration: none;
+}
+
+.tag-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tag-list li {
+  padding: 7px 12px;
+  border-radius: 20px;
+  color: var(--green);
+  background: var(--green-light);
+  font-size: 12px;
+}
+
+.placeholder {
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.entry {
+  display: grid;
+  grid-template-columns: 90px 1fr;
+  gap: 16px;
+  padding: 5px 0 18px;
+}
+
+.entry-date {
+  color: #668173;
+  font-size: 13px;
+  font-weight: 700;
+  padding-top: 3px;
+}
+
+h3 {
+  margin: 0 0 7px;
+  color: #2d473c;
+  font-size: 16px;
+}
+
+.muted {
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.8;
+}
+
+footer {
+  padding: 18px;
+  text-align: center;
+  color: #dce8df;
+  background: var(--green);
+  letter-spacing: 3px;
+  font-size: 12px;
+}
+
+@media (max-width: 700px) {
+  body {
+    padding: 18px 10px;
+    background-attachment: scroll;
+  }
+
+  .hero {
+    padding: 32px 24px;
+    min-height: 190px;
+  }
+
+  .profile-photo {
+    width: 112px;
+    height: 112px;
+  }
+
+  .resume-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar,
+  .main-content {
+    padding: 30px 26px;
+  }
+
+  .entry {
+    grid-template-columns: 78px 1fr;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero {
+    align-items: flex-start;
+    flex-direction: column-reverse;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+}

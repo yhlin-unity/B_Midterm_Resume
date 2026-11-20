@@ -1,0 +1,26 @@
+:root { --primary:#5C6A72; --deep:#5C6A72; --soft:#c4cacd; --paper:#F7F4EF; --ink:#36434a; }
+* { box-sizing:border-box; }
+body { margin:0; padding:36px 18px; min-height:100vh; display:flex; justify-content:center; align-items:flex-start; font-family:'Microsoft JhengHei','Noto Sans TC',Arial,sans-serif; color:var(--ink); background-color:#c4cacd; background-image:radial-gradient(circle at 15% 15%,rgba(247,244,239,.5) 0,transparent 35%),radial-gradient(circle at 85% 85%,rgba(149,160,166,.35) 0,transparent 38%); background-size:cover; }
+
+.page { width:794px; max-width:100%; min-height:1123px; background:var(--paper); box-shadow:0 16px 55px rgba(40,55,62,.17); overflow:hidden; }
+.intro { display:flex; align-items:center; gap:35px; padding:55px 52px 42px; background:linear-gradient(115deg,#5C6A72,#95a0a6); color:white; }
+.photo-frame { flex:0 0 164px; height:164px; border-radius:50%; border:5px solid rgba(255,255,255,.75); overflow:hidden; background:#c4cacd; }
+.photo-frame img { width:100%;height:100%;object-fit:cover; }
+.photo-frame.no-photo::after { content:'請放入個人照片'; display:flex;align-items:center;justify-content:center;height:100%;font-size:13px;color:var(--deep); }
+.eyebrow { font-size:12px;letter-spacing:1.5px;opacity:.9; }
+h1 { font-size:44px;letter-spacing:6px;margin:12px 0 8px; }
+.job-title { font-size:17px;letter-spacing:1px;margin:0; }
+.columns { display:grid;grid-template-columns:265px minmax(0,1fr);min-height:850px; }
+.sidebar { background:var(--soft);padding:36px 25px 50px 32px; }
+.content { padding:36px 45px 50px 35px; }
+.block + .block { margin-top:29px; }
+h2 { font-size:18px;color:var(--deep);border-bottom:2px solid #95a0a6;padding-bottom:9px;margin:0 0 13px;letter-spacing:2px; }
+p,li { font-size:14px;line-height:1.9;margin:5px 0; }
+ul { padding-left:19px;margin:0; }
+.break { overflow-wrap:anywhere; }
+.entry + .entry { margin-top:15px; }
+h3 { font-size:15px;margin:0 0 3px;color:var(--deep); }
+.meta { color:#5C6A72;font-size:13px; }
+@media(max-width:650px) { body{padding:12px;} .intro{padding:30px 20px;gap:18px;} .photo-frame{flex-basis:110px;height:110px;}h1{font-size:30px;}.columns{grid-template-columns:1fr;}.sidebar,.content{padding:25px;} }
+@page { size:A4;margin:0; }
+@media print { body{padding:0;background:none;display:block;} .page{width:210mm;min-height:297mm;box-shadow:none;print-color-adjust:exact;-webkit-print-color-adjust:exact;} }

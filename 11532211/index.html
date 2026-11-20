@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>個人簡歷 - 黃子菲</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <div class="resume-sheet">
+    <!-- 裝飾星芒 -->
+    <span class="sparkle top-left">✳</span>
+    <span class="sparkle top-right">✳</span>
+
+    <!-- 頂部弧形標題與頭像 -->
+    <header class="resume-header">
+      <svg class="curved-title" viewBox="0 0 360 110" aria-label="個人簡歷">
+        <defs>
+          <path id="titleArc" d="M 55,95 A 125,115 0 0,1 305,95" />
+        </defs>
+        <text fill="#8c1d18" font-size="36" font-weight="900" letter-spacing="8">
+          <textPath href="#titleArc" startOffset="50%" text-anchor="middle">
+            個人簡歷
+          </textPath>
+        </text>
+      </svg>
+
+      <!-- 櫻桃手繪裝飾 -->
+      <svg class="cherry-deco" viewBox="0 0 100 100" aria-hidden="true">
+        <path d="M48,18 C40,35 32,50 28,65" fill="none" stroke="#8c1d18" stroke-width="2.2" stroke-linecap="round"/>
+        <path d="M48,18 C58,34 66,48 70,63" fill="none" stroke="#8c1d18" stroke-width="2.2" stroke-linecap="round"/>
+        <!-- 蝴蝶結 -->
+        <path d="M48,18 C32,8 22,22 46,20 C25,28 34,38 48,20" fill="none" stroke="#8c1d18" stroke-width="2"/>
+        <path d="M48,18 C64,8 74,22 50,20 C71,28 62,38 48,20" fill="none" stroke="#8c1d18" stroke-width="2"/>
+        <!-- 櫻桃果實 -->
+        <circle cx="26" cy="72" r="13" fill="#8c1d18"/>
+        <path d="M20,66 A8,8 0 0,1 26,64" fill="none" stroke="#f7f3eb" stroke-width="2" stroke-linecap="round"/>
+        <circle cx="72" cy="70" r="13" fill="#8c1d18"/>
+        <path d="M66,64 A8,8 0 0,1 72,62" fill="none" stroke="#f7f3eb" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+
+      <!-- 圓形個人照片（請將 src 替換為實際照片路徑） -->
+      <div class="avatar-circle">
+        <img src="avatar.jpg" alt="黃子菲個人照片" onerror="this.style.display='none'; this.parentElement.classList.add('placeholder');">
+      </div>
+
+      <span class="sparkle mid-right-sm">✴</span>
+      <span class="sparkle mid-right-lg">✳</span>
+    </header>
+
+    <!-- 雙欄主內容區 -->
+    <main class="resume-body">
+      <!-- 左側欄位 -->
+      <div class="left-column">
+        <section class="card info-card">
+          <ul class="info-list">
+            <li><span class="label">姓名：</span>黃子菲</li>
+            <li><span class="label">電話：</span>0907736219</li>
+            <li><span class="label">Gmail：</span>vickyhuang1031@gmail.com</li>
+          </ul>
+
+          <div class="info-block">
+            <h2 class="section-title">就學經歷：</h2>
+            <p>台北市內湖區東湖國民小學</p>
+            <p>台北市立明湖國民中學</p>
+            <p>新北市私立復興高級商工職業學校</p>
+          </div>
+
+          <div class="info-block">
+            <h2 class="section-title">個人特質：</h2>
+            <p>勇於挑戰、待人和善、靈感豐富、創意十足</p>
+          </div>
+
+          <div class="info-block">
+            <h2 class="section-title">興趣專長：</h2>
+            <div class="hobbies-grid">
+              <!-- 繪畫 -->
+              <div class="hobby-item">
+                <svg class="hobby-icon" viewBox="0 0 64 64">
+                  <path d="M30,12 C16,12 8,22 10,34 C11,42 18,45 24,44 C28,43 27,49 32,51 C42,54 54,44 54,31 C54,19 43,12 30,12 Z" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <circle cx="22" cy="23" r="3" fill="none" stroke="#8c1d18" stroke-width="1.8"/>
+                  <circle cx="33" cy="20" r="3" fill="none" stroke="#8c1d18" stroke-width="1.8"/>
+                  <circle cx="43" cy="26" r="3" fill="none" stroke="#8c1d18" stroke-width="1.8"/>
+                  <circle cx="42" cy="37" r="3" fill="none" stroke="#8c1d18" stroke-width="1.8"/>
+                  <circle cx="20" cy="34" r="3.5" fill="none" stroke="#8c1d18" stroke-width="1.8"/>
+                  <line x1="12" y1="52" x2="46" y2="18" stroke="#8c1d18" stroke-width="2.2" stroke-linecap="round"/>
+                </svg>
+                <span class="vertical-text">繪畫</span>
+              </div>
+
+              <!-- 旅遊 -->
+              <div class="hobby-item">
+                <svg class="hobby-icon" viewBox="0 0 64 64">
+                  <rect x="16" y="22" width="32" height="28" rx="4" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <path d="M25,22 V14 H39 V22" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <line x1="25" y1="22" x2="25" y2="50" stroke="#8c1d18" stroke-width="1.8"/>
+                  <line x1="39" y1="22" x2="39" y2="50" stroke="#8c1d18" stroke-width="1.8"/>
+                  <circle cx="21" cy="53" r="2.5" fill="#8c1d18"/>
+                  <circle cx="43" cy="53" r="2.5" fill="#8c1d18"/>
+                </svg>
+                <span class="vertical-text">旅遊</span>
+              </div>
+
+              <!-- 運動 -->
+              <div class="hobby-item">
+                <svg class="hobby-icon" viewBox="0 0 64 64">
+                  <line x1="21" y1="43" x2="43" y2="21" stroke="#8c1d18" stroke-width="3"/>
+                  <rect x="12" y="34" width="6" height="16" rx="2" transform="rotate(-45 15 42)" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <rect x="17" y="39" width="5" height="12" rx="1.5" transform="rotate(-45 19.5 45)" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <rect x="46" y="14" width="6" height="16" rx="2" transform="rotate(-45 49 22)" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                  <rect x="42" y="13" width="5" height="12" rx="1.5" transform="rotate(-45 44.5 19)" fill="none" stroke="#8c1d18" stroke-width="2"/>
+                </svg>
+                <span class="vertical-text">運動</span>
+              </div>
+
+              <!-- 攝影 -->
+              <div class="hobby-item">
+                <svg class="hobby-icon" viewBox="0 0 64 64">
+                  <rect x="12" y="24" width="40" height="26" rx="4" fill="#8c1d18"/>
+                  <path d="M23,24 L26,18 H38 L41,24 Z" fill="#8c1d18"/>
+                  <circle cx="32" cy="37" r="8" fill="#f7f3eb"/>
+                  <circle cx="32" cy="37" r="5" fill="#8c1d18"/>
+                  <circle cx="45" cy="29" r="2" fill="#f7f3eb"/>
+                  <line x1="32" y1="10" x2="32" y2="14" stroke="#8c1d18" stroke-width="2"/>
+                  <line x1="24" y1="12" x2="26" y2="15" stroke="#8c1d18" stroke-width="2"/>
+                  <line x1="40" y1="12" x2="38" y2="15" stroke="#8c1d18" stroke-width="2"/>
+                </svg>
+                <span class="vertical-text">攝影</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 左下：專業軟體操作能力 -->
+        <section class="card software-card">
+          <h2 class="section-title">專業軟體操作能力：</h2>
+          <div class="software-grid">
+            <div class="sw-item">
+              <div class="sw-badge ai">Ai</div>
+              <span>illustrator</span>
+            </div>
+            <div class="sw-item">
+              <div class="sw-badge ps">Ps</div>
+              <span>photoshop</span>
+            </div>
+            <div class="sw-item">
+              <div class="sw-badge id">Id</div>
+              <span>indesign</span>
+            </div>
+            <div class="sw-item">
+              <div class="sw-badge ae">Ae</div>
+              <span>after effects</span>
+            </div>
+            <div class="sw-item">
+              <div class="sw-badge procreate">
+                <span class="feather"></span>
+              </div>
+              <span>procreate</span>
+            </div>
+            <div class="sw-item">
+              <div class="sw-badge ibis">ibis</div>
+              <span>愛筆思畫</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- 右側欄位：自傳介紹 -->
+      <div class="right-column">
+        <span class="sparkle bio-left-lg">✳</span>
+        <span class="sparkle bio-left-sm">✴</span>
+
+        <section class="card bio-card">
+          <p>
+            我叫黃子菲，成長於一個管教方式較為民主且開明的家庭。家人給予我充分的尊重與支持，讓我從小培養出獨立思考、樂觀積極的性格。在面對選擇與挑戰時，我能勇於嘗試不同的可能性，不受既有框架限制，透過不斷探索找到最適合自己的方向。
+          </p>
+          <p>
+            遇到困難時我不輕易放棄，而是主動尋找解決方法，並積極向師長與同儕請教。對我而言，每一次挑戰都是成長的機會，因此我總是努力把握各種學習與表現的機會，培養解決問題的能力與面對挫折的韌性。
+          </p>
+          <p>
+            隨著年齡增長，我逐漸對繪畫與設計產生濃厚興趣，因此選擇就讀設計相關科系，希望能將自己的創意與想法透過視覺形式呈現。在學習專業技能的過程中，經歷過許多困難與挫折，但也因此累積了許多寶貴的經驗與能力。每當完成一件作品、學會一項新技能時，都讓我更確定自己對設計領域的熱情。
+          </p>
+          <p>
+            我相信，每一次努力都是朝夢想邁進的一步。未來我期望持續精進自己的設計能力與創意思維，透過不斷學習與實踐，朝著理想目標穩健前進，並在設計領域中發揮自己的價值。
+          </p>
+        </section>
+
+        <span class="sparkle bottom-right">✳</span>
+      </div>
+    </main>
+  </div>
+</body>
+</html>

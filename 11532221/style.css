@@ -1,0 +1,295 @@
+
+/* 全部設定 */
+* {
+  box-sizing: border-box;
+}
+
+/* 網頁背景 */
+body {
+  margin: 0;
+  padding: 30px;
+  background-image: url("images/down.jpg");
+  background-attachment: fixed;
+  background-size: cover;
+  background-repeat: no-repeat;
+  font-family: 'Noto Sans TC', sans-serif;
+  color: #303b4b;
+}
+
+/* 整體紙張 */
+.page {
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  margin: auto;
+  background: #fffdf7;
+  overflow: hidden;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+  border: 5px double #b99a60;
+}
+
+/* 上方深藍色區域 */
+.band {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 225px;
+  background: #17283f;
+  border-bottom: 5px solid #c6a66a;
+}
+
+/* 上方裝飾線 */
+.band::before {
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 14px;
+  right: 14px;
+  bottom: 14px;
+  border: 1px solid #c6a66a;
+}
+
+/* 個人資料 */
+.intro {
+  position: absolute;
+  top: 48px;
+  left: 300px;
+  color: #fffdf7;
+  z-index: 2;
+}
+
+.intro h1 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 38px;
+  letter-spacing: 10px;
+  margin: 10px 0;
+}
+
+.job-title {
+  color: #dfc58f;
+  font-size: 16px;
+  letter-spacing: 4px;
+}
+
+/* 個人照片 */
+.photo {
+  position: absolute;
+  top: 42px;
+  left: 65px;
+  width: 185px;
+  height: 185px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 5px solid #d2b77d;
+  outline: 3px solid #fffdf7;
+  outline-offset: 4px;
+  z-index: 3;
+}
+
+/* 左側欄位 */
+.sidebar {
+  position: absolute;
+  top: 260px;
+  left: 35px;
+  width: 235px;
+  padding: 15px;
+  border-right: 2px solid #c6a66a;
+}
+
+/* 聯絡資訊 */
+.contact {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 25px;
+}
+
+.contact li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 17px;
+  font-size: 12px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.icon {
+  color: #b08d50;
+  min-width: 18px;
+  width: 18px;
+  height: 18px;
+}
+
+/* 區塊標題 */
+.block {
+  margin-bottom: 28px;
+}
+
+.block h2 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 19px;
+  color: #17283f;
+  letter-spacing: 3px;
+  padding-bottom: 9px;
+  margin-bottom: 13px;
+  border-bottom: 2px solid #c6a66a;
+  position: relative;
+}
+
+.block h2::after {
+  content: "✦";
+  position: absolute;
+  right: 2px;
+  bottom: 7px;
+  color: #b08d50;
+  font-size: 14px;
+}
+
+/* 左側清單 */
+.dash {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.dash li {
+  font-size: 13px;
+  line-height: 2;
+}
+
+.dash li::before {
+  content: "◆";
+  color: #b08d50;
+  font-size: 8px;
+  margin-right: 9px;
+}
+
+/* 語言 */
+.lang {
+  font-size: 13px;
+  line-height: 1.8;
+  margin: 10px 0;
+}
+
+.lang strong {
+  color: #a17d43;
+}
+
+/* 興趣專長 */
+.skills {
+  font-size: 13px;
+  line-height: 2;
+}
+
+/* 右側內容 */
+.content {
+  position: absolute;
+  top: 260px;
+  left: 310px;
+  width: 440px;
+}
+
+.content .block {
+  margin-bottom: 30px;
+}
+
+.content p {
+  font-size: 13px;
+  line-height: 2;
+  text-align: justify;
+}
+
+/* 工作經歷 */
+.entry {
+  margin-bottom: 20px;
+  padding-left: 17px;
+  border-left: 2px solid #d2b77d;
+  position: relative;
+}
+
+.entry::before {
+  content: "◆";
+  position: absolute;
+  left: -6px;
+  top: 2px;
+  color: #b08d50;
+  font-size: 10px;
+}
+
+.entry h3 {
+  font-family: 'Noto Serif TC', serif;
+  font-size: 16px;
+  color: #17283f;
+  margin: 0 0 5px;
+}
+
+.meta {
+  color: #a17d43;
+  font-size: 11px !important;
+  margin: 0 0 7px;
+}
+
+.entry .dash li {
+  font-size: 12px;
+  line-height: 1.9;
+}
+
+/* 頁面底部裝飾 */
+.page::after {
+  content: "✦ PERSONAL RESUME ✦";
+  position: absolute;
+  bottom: 18px;
+  right: 30px;
+  color: #b08d50;
+  font-family: serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+}
+
+/* 手機版 */
+@media screen and (max-width: 800px) {
+
+  body {
+    padding: 10px;
+  }
+
+  .page {
+    width: 100%;
+    min-height: 1400px;
+  }
+
+  .intro {
+    left: 38%;
+  }
+
+  .intro h1 {
+    font-size: 25px;
+    letter-spacing: 3px;
+  }
+
+  .photo {
+    left: 5%;
+    width: 27%;
+    height: auto;
+    aspect-ratio: 1;
+  }
+
+  .sidebar {
+    left: 3%;
+    width: 30%;
+  }
+
+  .content {
+    left: 37%;
+    width: 58%;
+  }
+
+  .contact li {
+    font-size: 10px;
+  }
+
+  .block h2 {
+    font-size: 16px;
+  }
+}

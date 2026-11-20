@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>陳宇軒 – 資深前端與介面設計師</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!-- 自動注入返回主頁按鈕 -->
+<style>
+  .auto-back-btn {
+    position: fixed;
+    top: 16px;
+    left: 16px;
+    z-index: 99999;
+    background: #2563eb;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 9999px;
+    text-decoration: none;
+    font-family: sans-serif;
+    font-size: 14px;
+    font-weight: 600;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+    transition: transform 0.2s;
+  }
+  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
+</style>
+<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+
+  <main class="page">
+
+    <!-- 頂部主視覺色帶 -->
+    <div class="band"></div>
+    <header class="intro">
+      <h1>葉耀良</h1>
+      <p class="job-title">專業視覺與介面設計師</p>
+    </header>
+
+    <img class="photo" src="images/profile.png" alt="陳宇軒個人大頭照" width="190" height="190">
+
+    <!-- 左側邊欄 -->
+    <aside class="sidebar">
+      <ul class="contact">
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </span>
+          <span>0935-223-511</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7v.2L12 12.6 19.4 7.2V7L12 12.2z"/></svg>
+          </span>
+          <span>1153253@gm.chihlee.edu.tw</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <span>新北市板橋區文化路一段</span>
+        </li>
+      </ul>
+
+      <section class="block">
+        <h2>附加資訊</h2>
+        <ul class="dash">
+          <li>持有普通小型車駕照</li>
+          <li>具備自用交通工具</li>
+          <li>可配合專案彈性調度</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>語言能力</h2>
+        <p class="lang"><strong>中文（國語）：</strong><br>母語程度，精通書寫與簡報</p>
+        <p class="lang"><strong>英文：</strong><br>中等流利（TOEIC 820 分）</p>
+        <p class="lang"><strong>台語：</strong><br>日常會話流利</p>
+      </section>
+
+      <section class="block">
+        <h2>專業技能</h2>
+        <p class="skills">UI/UX 介面設計、Figma 原型製作、HTML5 / CSS3 響應式網頁切版、品牌視覺識別規劃、跨部門團隊溝通協作與敏捷專案管理。</p>
+      </section>
+    </aside>
+
+    <!-- 右側主要內容 -->
+    <div class="content">
+      <section class="block">
+        <h2>關於我</h2>
+        <p>熱愛數位設計與品牌行銷，具備六年以上的網頁介面設計與視覺規劃經驗。善於傾聽使用者需求並轉化為直覺流暢的操作體驗，曾帶領跨領域設計與前端團隊完成多項大型商業網站與品牌改版專案。</p>
+      </section>
+
+      <section class="block">
+        <h2>工作經歷</h2>
+
+        <article class="entry">
+          <h3>資深視覺與介面設計師</h3>
+          <p class="meta">星辰數位創意有限公司 | 2022 年 5 月 – 至今</p>
+          <ul class="dash">
+            <li>主導企業官網與電商平台之 UI/UX 設計系統建置。</li>
+            <li>制定品牌數位行銷視覺規範與設計策略。</li>
+            <li>追蹤網站轉換率數據並持續優化使用者動線。</li>
+            <li>帶領 5 人設計團隊並協調前端工程師完成開發。</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>網頁與品牌設計師</h3>
+          <p class="meta">遠見整合行銷股份有限公司 | 2019 年 7 月 – 2022 年 4 月</p>
+          <ul class="dash">
+            <li>負責客戶數位廣告活動頁面（Landing Page）設計與切版。</li>
+            <li>執行品牌識別系統（CIS）更新與社群視覺企劃。</li>
+            <li>協助商業提案簡報製作，成功贏得多項年度標案。</li>
+          </ul>
+        </article>
+
+        <article class="entry">
+          <h3>初級視覺設計師</h3>
+          <p class="meta">禾風設計工作室 | 2017 年 9 月 – 2019 年 6 月</p>
+          <ul class="dash">
+            <li>協助網站版面編排、圖示繪製與響應式網頁測試。</li>
+            <li>參與平面文宣、包裝設計與商業攝影修圖作業。</li>
+            <li>維護既有客戶網站視覺更新與日常版面調整。</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="block">
+        <h2>學歷背景</h2>
+
+        <article class="entry compact">
+          <h3>國立臺灣藝術大學</h3>
+          <p class="meta">視覺傳達設計學系 博士班 | 2018 年 9 月 – 2020 年 6 月</p>
+        </article>
+        <article class="entry compact">
+          <h3>銘傳大學</h3>
+          <p class="meta">商業設計學系 學士 | 2013 年 9 月 – 2017 年 6 月</p>
+        </article>
+        <article class="entry compact">
+          <h3>新北市立板橋高級中學</h3>
+          <p class="meta">普通科 | 2010 年 9 月 – 2013 年 6 月</p>
+        </article>
+      </section>
+    </div>
+
+  </main>
+</body>
+</html>
