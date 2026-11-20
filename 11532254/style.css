@@ -1,0 +1,185 @@
+:root {
+  --blue: #c87a8a;        /* 主色：溫柔乾燥玫瑰粉 */
+  --blue-light: #faeff1;  /* 淺色：櫻花奶油粉（左側欄底色） */
+  --text: #33292b;        /* 深可可灰字體 */
+  --white: #fff;
+  --sidebar-w: 311px;
+  --main-x: 340px;
+  --main-w: 377px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  background-color: #f3dfe3;              /* 柔和粉嫩備用底色 */
+  background-image: url("images/bg.jpg"); 
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  font-family: "Noto Sans TC", "微軟正黑體", "Segoe UI", Arial, sans-serif;
+  color: var(--text);
+  display: flex;
+  justify-content: center;
+  padding: 24px 0;
+}
+
+/* A4-proportioned page */
+.page {
+  position: relative;
+  width: 794px;
+  min-height: 1123px;
+  background: linear-gradient(to right, var(--blue-light) var(--sidebar-w), var(--white) var(--sidebar-w));
+  box-shadow: 0 8px 24px rgba(130, 70, 85, 0.15);
+  overflow: hidden;
+}
+
+/* Header */
+.band {
+  position: absolute;
+  top: 81px;
+  left: 0;
+  right: 0;
+  height: 123px;
+  background: var(--blue);
+}
+
+.intro {
+  position: absolute;
+  top: 100px;
+  left: var(--main-x);
+  color: var(--white);
+}
+
+.intro h1 {
+  font-size: 36px;
+  font-weight: 700;
+  letter-spacing: 6px;
+  margin-bottom: 6px;
+}
+
+.intro .job-title {
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  opacity: 0.95;
+}
+
+/* 大頭照 */
+.photo {
+  position: absolute;
+  top: 43px;
+  left: 55px;
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border: 5px solid var(--white);
+  box-shadow: 0 4px 10px rgba(130, 70, 85, 0.15);
+  background: #f5e6e8;
+}
+
+/* 左側欄 */
+.sidebar {
+  position: absolute;
+  top: 270px;
+  left: 36px;
+  width: 240px;
+}
+
+.contact {
+  list-style: none;
+  margin-bottom: 28px;
+}
+
+.contact li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 13px;
+  margin-bottom: 12px;
+  word-break: break-all;
+}
+
+.contact .icon {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: var(--blue);
+  color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.contact svg {
+  width: 14px;
+  height: 14px;
+  fill: currentColor;
+}
+
+.side-block {
+  margin-bottom: 24px;
+}
+
+.side-block h2,
+.main-block h2 {
+  background: var(--blue);
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  padding: 6px 14px;
+  margin-bottom: 12px;
+}
+
+.side-block p {
+  font-size: 13.5px;
+  line-height: 1.65;
+  margin-bottom: 8px;
+}
+
+/* 右側欄 */
+.main {
+  position: absolute;
+  top: 240px;
+  left: var(--main-x);
+  width: var(--main-w);
+}
+
+.main-block {
+  margin-bottom: 28px;
+}
+
+.main-block p {
+  font-size: 14px;
+  line-height: 1.75;
+  text-align: justify;
+}
+
+.item {
+  margin-bottom: 18px;
+}
+
+.item h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--blue);
+  margin-bottom: 3px;
+}
+
+.item .sub {
+  font-size: 13px;
+  color: #6e5c60;
+  margin-bottom: 8px;
+}
+
+.item ul {
+  padding-left: 18px;
+}
+
+.item li {
+  font-size: 13.5px;
+  line-height: 1.7;
+  margin-bottom: 6px;
+}
