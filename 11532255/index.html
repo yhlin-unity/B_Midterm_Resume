@@ -1,191 +1,129 @@
 <!DOCTYPE html>
-<html lang="zh-TW">
+<html lang="zh-tw">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>蘇宜軒 - 個人簡介</title>
-  <!-- 連結外部字型與獨立的 style.css 檔案 -->
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Douglas Lin – Design Director</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&family=Raleway:wght@600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<!-- 自動注入返回主頁按鈕 -->
-<style>
-  .auto-back-btn {
-    position: fixed;
-    top: 16px;
-    left: 16px;
-    z-index: 99999;
-    background: #2563eb;
-    color: #ffffff;
-    padding: 8px 16px;
-    border-radius: 9999px;
-    text-decoration: none;
-    font-family: sans-serif;
-    font-size: 14px;
-    font-weight: 600;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.25);
-    transition: transform 0.2s;
-  }
-  .auto-back-btn:hover { transform: translateY(-2px); background: #1d4ed8; }
-</style>
-<a href="../index.html" class="auto-back-btn">← 返回作品總覽主頁</a>
+  <main class="page">
 
+    <!-- Header band -->
+    <div class="band"></div>
+    <header class="intro">
+      <h1>蘇 宜 軒</h1>
+      <p class="job-title">設計總監</p>
+    </header>
 
-  <div class="resume-container">
-    <div class="main-content">
-      
-      <!-- 左半部 -->
-      <div class="left-col">
-        <!-- 頭像區 -->
-        <div class="avatar-section">
-          <div class="avatar-frame">
-            <!-- 請將下方的 src 替換為您的頭像圖片路徑 -->
-            <img src="images/%E6%9C%AA%E5%91%BD%E5%90%8D%E8%A8%AD%E8%A8%88.jpg" alt="蘇宜軒大頭照">
-          </div>
-          <div class="school-title">觀音高中 多媒體動畫科</div>
-        </div>
+    <img class="photo" src="images/1212.jpg" alt="Portrait of Douglas Lin" width=200px height=200px>
 
-        <!-- 姓名黃色橫幅 -->
-        <div class="name-banner">
-          <h1>蘇宜軒</h1>
-          <h2>個人簡介</h2>
-        </div>
+    <!-- Left column -->
+    <aside class="sidebar">
+      <ul class="contact">
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1c0 1.25.2 2.45.57 3.57a1 1 0 0 1-.25 1z"/></svg>
+          </span>
+          <span>+123-456-7890</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 5h18a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1zm9 7.2L4.6 7v.2L12 12.6 19.4 7.2V7L12 12.2z"/></svg>
+          </span>
+          <span>11532255@gm.chihlee.edu.tw</span>
+        </li>
+        <li>
+          <span class="icon">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a7 7 0 0 0-7 7c0 5 7 13 7 13s7-8 7-13a7 7 0 0 0-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>
+          </span>
+          <span>桃園市</span>
+        </li>
+      </ul>
 
-        <!-- 幹部經歷 -->
-        <div class="info-block">
-          <h3 class="section-title">幹部經歷</h3>
-          <ul class="info-list">
-            <li><span class="role-name">英文小老師</span><span>(高一~高三)</span></li>
-            <li><span class="role-name">試務股長</span><span>(高二下~高三)</span></li>
-            <li><span class="role-name">社團美宣</span><span>(高二)</span></li>
+      <section class="block">
+        <h2>其他資訊</h2>
+        <ul class="dash">
+          <li>喜歡看男同，嗑各種cp，同人也愛</li>
+          <li>疑似獸控(我喜歡看可愛的。)</li>
+          <li>幹話很多</li>
+        </ul>
+      </section>
+
+      <section class="block">
+        <h2>語言</h2>
+        <p class="lang"><strong>英文:</strong><br>還好</p>
+        <p class="lang"><strong>中文:</strong><br>會說</p>
+        <p class="lang"><strong>台語:</strong><br>聽得懂，會講一些</p>
+      </section>
+
+      <section class="block">
+        <h2>特質</h2>
+        <p class="skills">虛心上進、待人友善、個性隨和、樂於學習</p>
+      </section>
+    </aside>
+
+    <!-- Right column -->
+    <div class="content">
+      <section class="block">
+        <h2>關於我</h2>
+        <p>喜歡畫畫，時常聽音樂，偶爾看漫畫，特別喜歡觀察動物。也喜歡收藏各式小物，像是周邊、娃娃之類的。</p>
+      </section>
+
+      <section class="block">
+        <h2>就學經歷</h2>
+
+        <article class="entry">
+          <h3>桃園市中壢區中平國小</h3>
+          <p class="meta"></p>
+          <ul class="dash">
+        
           </ul>
-        </div>
+        </article>
 
-        <!-- 個人特質 -->
-        <div class="info-block">
-          <h3 class="section-title">個人特質</h3>
-          <ul class="info-list">
-            <li>虛心上進</li>
-            <li>待人友善</li>
-            <li>個性隨和</li>
-            <li>樂於學習</li>
+        <article class="entry">
+          <h3>桃園市立過嶺國民中學</h3>
+          <p class="meta"></p>
+          <ul class="dash">
+         
           </ul>
-        </div>
+        </article>
 
-        <!-- 興趣愛好 -->
-        <div class="info-block" style="margin-bottom: 0;">
-          <h3 class="section-title">興趣愛好</h3>
-          <ul class="info-list">
-            <li>繪畫</li>
-            <li>聽音樂</li>
-            <li>閱讀漫畫</li>
-            <li>觀察動物</li>
-            <li>探索新事物</li>
-            <li>收藏各式小物</li>
-          </ul>
-        </div>
-      </div>
-
-      <!-- 右半部 -->
-      <div class="right-col">
-        <!-- 何倫碼六邊形圖 -->
-        <div class="riasec-wrapper">
-          <div class="riasec-grid">
-            <div class="hex-item hex-c">
-              <div class="hex-inner">
-                <span class="hex-letter">C</span>
-                <span class="hex-label">事務型</span>
-              </div>
-            </div>
-            <div class="hex-item hex-e">
-              <div class="hex-inner">
-                <span class="hex-letter">E</span>
-                <span class="hex-label">企業型</span>
-              </div>
-            </div>
-            <div class="hex-item hex-r">
-              <div class="hex-inner">
-                <span class="hex-letter">R</span>
-                <span class="hex-label">實用型</span>
-              </div>
-            </div>
-            <div class="hex-item hex-s active">
-              <div class="hex-inner">
-                <span class="hex-letter">S</span>
-                <span class="hex-label">社會型</span>
-              </div>
-            </div>
-            <div class="hex-item hex-i">
-              <div class="hex-inner">
-                <span class="hex-letter">I</span>
-                <span class="hex-label">研究型</span>
-              </div>
-            </div>
-            <div class="hex-item hex-a active">
-              <div class="hex-inner">
-                <span class="hex-letter">A</span>
-                <span class="hex-label">藝術型</span>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- 人格說明文字 -->
-        <p class="personality-desc">
-          興趣量表結果顯示，我適合在重視合作與溝通的環境中發展，對文化、藝術及媒體相關領域具有較高興趣。做決策時傾向重視人際和諧與團隊合作，具備創意思考與溝通表達特質，符合「善於溝通的創意家、樂於助人的媒體人」的人格。
-        </p>
-
-        <!-- 程式應用 -->
-        <div class="skills-section">
-          <h3 class="section-title">程式應用</h3>
+        <article class="entry">
+          <h3>桃園市立觀音高級中等學校</h3>
+          <p class="meta"></p>
+          <ul class="dash">
+            <li>多媒體動畫科</li>
           
-          <div class="skills-chart-container">
-            <!-- 左側軟體 Icon -->
-            <div class="skill-icons">
-              <div class="app-icon icon-ai">Ai</div>
-              <div class="app-icon icon-ps">Ps</div>
-              <div class="app-icon icon-ae">Ae</div>
-              <div class="app-icon icon-mb">Mb</div>
-              <div class="app-icon icon-csp">CSP</div>
-            </div>
+          </ul>
+        </article>
+      </section>
 
-            <!-- 右側長條圖 -->
-            <div class="chart-area">
-              <!-- 背景刻度線 -->
-              <div class="grid-lines">
-                <div class="grid-line"><span>0</span></div>
-                <div class="grid-line"><span>20</span></div>
-                <div class="grid-line"><span>40</span></div>
-                <div class="grid-line"><span>60</span></div>
-                <div class="grid-line"><span>80</span></div>
-                <div class="grid-line"><span>100</span></div>
-              </div>
+      <section class="block">
+        <h2>技能</h2>
 
-              <!-- 數據長條 -->
-              <div class="bars-list">
-                <div class="bar-row"><div class="bar-fill" style="width: 75%;"></div></div>
-                <div class="bar-row"><div class="bar-fill" style="width: 75%;"></div></div>
-                <div class="bar-row"><div class="bar-fill" style="width: 45%;"></div></div>
-                <div class="bar-row"><div class="bar-fill" style="width: 85%;"></div></div>
-                <div class="bar-row"><div class="bar-fill" style="width: 85%;"></div></div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
+        <article class="entry compact">
+          <h3>Adobe</h3>
+          <p class="meta">Ps、Ai</p>
+        </article>
+        <article class="entry compact">
+          <h3>繪畫軟體</h3>
+          <p class="meta">CSP、Medibeng Paint</p>
+        </article>
+        <article class="entry compact">
+          <h3>丙級</h3>
+          <p class="meta">印前製程-圖文組板PC</p>
+        </article>
+        <article class="entry compact">
+          <h3>我愛玩遊戲</h3>
+          <p class="meta">薑餅人、荒野亂鬥、傳說、鐵道、絕區零</p>
+        </article>
+      </section>
     </div>
 
-    <!-- 底部色條與幾何裝飾 -->
-    <div class="bottom-decor">
-      <div class="bottom-bar"></div>
-    </div>
-    <div class="corner-hex-outline"></div>
-    <div class="corner-hex-solid"></div>
-  </div>
-
+  </main>
 </body>
 </html>

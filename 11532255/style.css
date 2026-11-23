@@ -1,8 +1,8 @@
 :root {
-  --blue: #456696;
-  --blue-light: #d9e0ec;
-  --text: #111;
-  --white: #fff;
+  --blue: #7a3232;
+  --blue-light: #f8baba;
+  --text: #8c1c1c;
+  --white: #ffdbdb;
   --sidebar-w: 311px;
   --main-x: 340px;
   --main-w: 377px;
@@ -11,7 +11,7 @@
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
 body {
-  background: #e6e6e6;
+   background-image: url('./images/23.jpg');
   font-family: "Open Sans", "Segoe UI", Arial, sans-serif,微軟正黑體;
   color: var(--text);
   display: flex;
